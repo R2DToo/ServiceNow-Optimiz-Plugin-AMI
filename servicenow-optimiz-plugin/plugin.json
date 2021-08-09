@@ -1,0 +1,37 @@
+{
+  "type": "datasource",
+  "name": "servicenow-optimiz-plugin",
+  "id": "servicenow-optimiz-plugin",
+  "metrics": true,
+  "info": {
+    "description": "servicenow optimiz plugin",
+    "author": {
+      "name": "osamaawwad",
+      "url": ""
+    },
+    "keywords": [],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/optimizca/servicenow-grafana"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/optimizca/servicenow-grafana/blob/main/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "1.0.0",
+    "updated": "2021-08-09"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=8.0.1",
+    "grafanaVersion": "8.0.1",
+    "plugins": []
+  },
+  "annotations": true
+}
