@@ -64,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1628523867886,
+  "iteration": 1628527517133,
   "links": [],
   "panels": [
     {
@@ -82,11 +82,11 @@
       "type": "row"
     },
     {
-      "datasource": "-- Dashboard --",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "blue",
+            "fixedColor": "#5865f2",
             "mode": "fixed"
           },
           "custom": {
@@ -109,10 +109,6 @@
               {
                 "color": "green",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
@@ -145,59 +141,30 @@
       "pluginVersion": "8.0.6",
       "targets": [
         {
-          "depends_on_toggle": "$dependsOnFilter",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
-          "panelId": 4,
+          "aggregateColumn": "value",
+          "groupBy": "key",
           "refId": "A",
-          "selectedQueryCategory": {
-            "description": "Get Timeseries metrics.",
-            "label": "Metrics",
-            "value": "Metrics"
+          "selectedAggregateType": {
+            "label": "COUNT",
+            "value": "COUNT"
           },
-          "service": "$service",
-          "source": "$source"
+          "selectedQueryCategory": {
+            "description": "Group by and apply aggregate functions to table data",
+            "label": "Aggregate",
+            "value": "Aggregate"
+          },
+          "sysparam_query": "configuration_item.sys_class_nameIN$ciClasses^configuration_itemIN$ci^keyIN$tag",
+          "tableName": "cmdb_key_value"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "transformations": [
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "key": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "tag": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              }
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "key": false
-            },
-            "indexByName": {},
-            "renameByName": {
-              "key": "",
-              "tag (count)": "count"
-            }
-          }
-        }
-      ],
+      "transformations": [],
       "transparent": true,
       "type": "barchart"
     },
     {
-      "datasource": "-- Dashboard --",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -222,7 +189,7 @@
               {
                 "id": "color",
                 "value": {
-                  "fixedColor": "red",
+                  "fixedColor": "#ed4245",
                   "mode": "fixed"
                 }
               }
@@ -237,7 +204,7 @@
               {
                 "id": "color",
                 "value": {
-                  "fixedColor": "green",
+                  "fixedColor": "#57f287",
                   "mode": "fixed"
                 }
               }
@@ -269,7 +236,7 @@
           "calcs": [
             "lastNotNull"
           ],
-          "fields": "/^sys_id \\(count\\)$/",
+          "fields": "",
           "values": true
         },
         "tooltip": {
@@ -279,44 +246,24 @@
       "pluginVersion": "8.0.6",
       "targets": [
         {
-          "depends_on_toggle": "$dependsOnFilter",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
-          "panelId": 14,
+          "aggregateColumn": "sys_id",
+          "groupBy": "status",
           "refId": "A",
-          "selectedQueryCategory": {
-            "description": "Get Timeseries metrics.",
-            "label": "Metrics",
-            "value": "Metrics"
+          "selectedAggregateType": {
+            "label": "COUNT",
+            "value": "COUNT"
           },
-          "service": "$service",
-          "source": "$source"
+          "selectedQueryCategory": {
+            "description": "Group by and apply aggregate functions to table data",
+            "label": "Aggregate",
+            "value": "Aggregate"
+          },
+          "sysparam_query": "configuration_item.sys_class_nameIN$ciClasses^configuration_itemIN$ci^statusIN$compliance",
+          "tableName": "sn_itom_tag_health_listing"
         }
       ],
       "title": "Tag Compliance",
-      "transformations": [
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "configuration_item": {
-                "aggregations": [],
-                "operation": null
-              },
-              "status": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "sys_id": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              }
-            }
-          }
-        }
-      ],
+      "transformations": [],
       "transparent": true,
       "type": "piechart"
     },
@@ -756,7 +703,8 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "auto"
+            "displayMode": "auto",
+            "filterable": true
           },
           "mappings": [],
           "thresholds": {
@@ -790,7 +738,7 @@
                         "index": 0
                       },
                       "Non Compliant": {
-                        "color": "red",
+                        "color": "#ed4245",
                         "index": 1
                       }
                     },
@@ -1016,5 +964,5 @@
   "timezone": "",
   "title": "CI Tag Health",
   "uid": "y1rzi9W7p",
-  "version": 4
+  "version": 10
 }

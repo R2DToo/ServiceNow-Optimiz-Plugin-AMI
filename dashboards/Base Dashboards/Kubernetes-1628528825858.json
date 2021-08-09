@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1628523652661,
+  "iteration": 1628528804501,
   "links": [],
   "panels": [
     {
@@ -177,9 +177,9 @@
           "metricType": "$metricType",
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Get row count from query",
+            "label": "Row Count",
+            "value": "Row_Count"
           },
           "service": "$service",
           "source": "$source",
@@ -192,246 +192,10 @@
         {
           "id": "organize",
           "options": {
-            "excludeByName": {
-              "access_url": true,
-              "asset": true,
-              "asset_tag": true,
-              "assigned": true,
-              "assigned_to": true,
-              "assignment_group": true,
-              "attestation_score": true,
-              "attested": true,
-              "attested_by": true,
-              "attested_date": true,
-              "attributes": true,
-              "can_print": true,
-              "category": true,
-              "change_control": true,
-              "checked_in": true,
-              "checked_out": true,
-              "cl_port": true,
-              "classifier": true,
-              "codesha256": true,
-              "comments": true,
-              "company": true,
-              "config_directory": true,
-              "config_file": true,
-              "correlation_id": true,
-              "cost": true,
-              "cost_cc": true,
-              "cost_center": true,
-              "delivery_date": true,
-              "department": true,
-              "dns_domain": true,
-              "due": true,
-              "due_in": true,
-              "duplicate_of": true,
-              "edition": true,
-              "environment": true,
-              "fqdn": true,
-              "gl_account": true,
-              "install_date": true,
-              "install_directory": true,
-              "invoice_number": true,
-              "ip_address": true,
-              "justification": true,
-              "ldc_name": true,
-              "ldc_object_id": true,
-              "lease_id": true,
-              "life_cycle_stage": true,
-              "life_cycle_stage_status": true,
-              "location": true,
-              "mac_address": true,
-              "maintenance_schedule": true,
-              "managed_by": true,
-              "managed_by_group": true,
-              "manufacturer": true,
-              "model_id": true,
-              "model_number": true,
-              "order_date": true,
-              "owned_by": true,
-              "pid": true,
-              "po_number": true,
-              "purchase_date": true,
-              "rp_command_hash": true,
-              "rp_key_parameters_hash": true,
-              "running_process": true,
-              "running_process_command": true,
-              "running_process_key_parameters": true,
-              "schedule": true,
-              "serial_number": true,
-              "short_description": true,
-              "skip_sync": true,
-              "start_date": true,
-              "subcategory": true,
-              "support_group": true,
-              "supported_by": true,
-              "sys_class_path": true,
-              "sys_created_on": true,
-              "sys_domain": true,
-              "sys_domain_path": true,
-              "sys_mod_count": true,
-              "tcp_port": true,
-              "unverified": true,
-              "vendor": true,
-              "vm_disks_size": true,
-              "vm_guest_os_fullname": true,
-              "vm_object_id": true,
-              "warranty_expiration": true
-            },
-            "indexByName": {
-              "asset": 2,
-              "asset_tag": 3,
-              "assigned": 4,
-              "assigned_to": 5,
-              "assignment_group": 6,
-              "attestation_score": 7,
-              "attested": 8,
-              "attested_by": 9,
-              "attested_date": 10,
-              "attributes": 11,
-              "can_print": 12,
-              "category": 13,
-              "change_control": 14,
-              "checked_in": 15,
-              "checked_out": 16,
-              "cluster": 79,
-              "comments": 17,
-              "company": 18,
-              "correlation_id": 19,
-              "cost": 20,
-              "cost_cc": 21,
-              "cost_center": 22,
-              "delivery_date": 23,
-              "department": 24,
-              "discovery_source": 25,
-              "dns_domain": 26,
-              "due": 27,
-              "due_in": 28,
-              "duplicate_of": 29,
-              "environment": 30,
-              "event_timestamp": 80,
-              "fault_count": 31,
-              "first_discovered": 32,
-              "fqdn": 33,
-              "gl_account": 34,
-              "install_date": 35,
-              "install_status": 36,
-              "invoice_number": 37,
-              "ip_address": 38,
-              "justification": 39,
-              "k8s_uid": 81,
-              "last_discovered": 40,
-              "lease_id": 41,
-              "life_cycle_stage": 42,
-              "life_cycle_stage_status": 43,
-              "location": 44,
-              "mac_address": 45,
-              "maintenance_schedule": 46,
-              "managed_by": 47,
-              "managed_by_group": 48,
-              "manufacturer": 49,
-              "model_id": 50,
-              "model_number": 51,
-              "monitor": 52,
-              "name": 0,
-              "namespace": 1,
-              "operational_status": 53,
-              "order_date": 54,
-              "owned_by": 55,
-              "po_number": 56,
-              "port": 82,
-              "purchase_date": 57,
-              "schedule": 58,
-              "self_link": 83,
-              "serial_number": 59,
-              "short_description": 60,
-              "skip_sync": 61,
-              "start_date": 62,
-              "subcategory": 63,
-              "support_group": 65,
-              "supported_by": 64,
-              "sys_class_name": 66,
-              "sys_class_path": 67,
-              "sys_created_by": 68,
-              "sys_created_on": 69,
-              "sys_domain": 70,
-              "sys_domain_path": 71,
-              "sys_id": 72,
-              "sys_mod_count": 73,
-              "sys_updated_by": 74,
-              "sys_updated_on": 75,
-              "unverified": 76,
-              "vendor": 77,
-              "warranty_expiration": 78
-            },
+            "excludeByName": {},
+            "indexByName": {},
             "renameByName": {
-              "ldc_region": "",
-              "vm_name": ""
-            }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "name"
-              }
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "app_function_state": true,
-              "aws_resource_name": true,
-              "cluster": true,
-              "event_timestamp": true,
-              "self_link": true
-            },
-            "indexByName": {
-              "cluster": 15,
-              "discovery_source": 8,
-              "event_timestamp": 16,
-              "fault_count": 9,
-              "first_discovered": 10,
-              "install_status": 11,
-              "k8s_uid": 17,
-              "last_discovered": 0,
-              "monitor": 6,
-              "name": 3,
-              "namespace": 5,
-              "operational_status": 2,
-              "port": 4,
-              "self_link": 18,
-              "sys_class_name": 1,
-              "sys_created_by": 12,
-              "sys_id": 7,
-              "sys_updated_by": 13,
-              "sys_updated_on": 14
-            },
-            "renameByName": {
-              "code_size": ""
-            }
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "name": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              },
-              "sys_class_name": {
-                "aggregations": [],
-                "operation": "groupby"
-              }
+              "cmdb_ci_kubernetes_cluster": "Kubernetes Cluster"
             }
           }
         }
@@ -541,9 +305,9 @@
           "metricType": "$metricType",
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Get row count from query",
+            "label": "Row Count",
+            "value": "Row_Count"
           },
           "service": "$service",
           "source": "$source",
@@ -553,199 +317,6 @@
         }
       ],
       "transformations": [
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "access_url": true,
-              "asset": true,
-              "asset_tag": true,
-              "assigned": true,
-              "assigned_to": true,
-              "assignment_group": true,
-              "attestation_score": true,
-              "attested": true,
-              "attested_by": true,
-              "attested_date": true,
-              "attributes": true,
-              "can_print": true,
-              "category": true,
-              "change_control": true,
-              "checked_in": true,
-              "checked_out": true,
-              "cl_port": true,
-              "classifier": true,
-              "codesha256": true,
-              "comments": true,
-              "company": true,
-              "config_directory": true,
-              "config_file": true,
-              "correlation_id": true,
-              "cost": true,
-              "cost_cc": true,
-              "cost_center": true,
-              "delivery_date": true,
-              "department": true,
-              "dns_domain": true,
-              "due": true,
-              "due_in": true,
-              "duplicate_of": true,
-              "edition": true,
-              "environment": true,
-              "fqdn": true,
-              "gl_account": true,
-              "install_date": true,
-              "install_directory": true,
-              "invoice_number": true,
-              "ip_address": true,
-              "justification": true,
-              "ldc_name": true,
-              "ldc_object_id": true,
-              "lease_id": true,
-              "life_cycle_stage": true,
-              "life_cycle_stage_status": true,
-              "location": true,
-              "mac_address": true,
-              "maintenance_schedule": true,
-              "managed_by": true,
-              "managed_by_group": true,
-              "manufacturer": true,
-              "model_id": true,
-              "model_number": true,
-              "order_date": true,
-              "owned_by": true,
-              "pid": true,
-              "po_number": true,
-              "purchase_date": true,
-              "rp_command_hash": true,
-              "rp_key_parameters_hash": true,
-              "running_process": true,
-              "running_process_command": true,
-              "running_process_key_parameters": true,
-              "schedule": true,
-              "serial_number": true,
-              "short_description": true,
-              "skip_sync": true,
-              "start_date": true,
-              "subcategory": true,
-              "support_group": true,
-              "supported_by": true,
-              "sys_class_path": true,
-              "sys_created_on": true,
-              "sys_domain": true,
-              "sys_domain_path": true,
-              "sys_mod_count": true,
-              "tcp_port": true,
-              "unverified": true,
-              "vendor": true,
-              "vm_disks_size": true,
-              "vm_guest_os_fullname": true,
-              "vm_object_id": true,
-              "warranty_expiration": true
-            },
-            "indexByName": {
-              "asset": 2,
-              "asset_tag": 3,
-              "assigned": 4,
-              "assigned_to": 5,
-              "assignment_group": 6,
-              "attestation_score": 7,
-              "attested": 8,
-              "attested_by": 9,
-              "attested_date": 10,
-              "attributes": 11,
-              "can_print": 12,
-              "category": 13,
-              "change_control": 14,
-              "checked_in": 15,
-              "checked_out": 16,
-              "cluster": 79,
-              "comments": 17,
-              "company": 18,
-              "correlation_id": 19,
-              "cost": 20,
-              "cost_cc": 21,
-              "cost_center": 22,
-              "delivery_date": 23,
-              "department": 24,
-              "discovery_source": 25,
-              "dns_domain": 26,
-              "due": 27,
-              "due_in": 28,
-              "duplicate_of": 29,
-              "environment": 30,
-              "event_timestamp": 80,
-              "fault_count": 31,
-              "first_discovered": 32,
-              "fqdn": 33,
-              "gl_account": 34,
-              "install_date": 35,
-              "install_status": 36,
-              "invoice_number": 37,
-              "ip_address": 38,
-              "justification": 39,
-              "k8s_uid": 81,
-              "last_discovered": 40,
-              "lease_id": 41,
-              "life_cycle_stage": 42,
-              "life_cycle_stage_status": 43,
-              "location": 44,
-              "mac_address": 45,
-              "maintenance_schedule": 46,
-              "managed_by": 47,
-              "managed_by_group": 48,
-              "manufacturer": 49,
-              "model_id": 50,
-              "model_number": 51,
-              "monitor": 52,
-              "name": 0,
-              "namespace": 1,
-              "operational_status": 53,
-              "order_date": 54,
-              "owned_by": 55,
-              "po_number": 56,
-              "port": 82,
-              "purchase_date": 57,
-              "schedule": 58,
-              "self_link": 83,
-              "serial_number": 59,
-              "short_description": 60,
-              "skip_sync": 61,
-              "start_date": 62,
-              "subcategory": 63,
-              "support_group": 65,
-              "supported_by": 64,
-              "sys_class_name": 66,
-              "sys_class_path": 67,
-              "sys_created_by": 68,
-              "sys_created_on": 69,
-              "sys_domain": 70,
-              "sys_domain_path": 71,
-              "sys_id": 72,
-              "sys_mod_count": 73,
-              "sys_updated_by": 74,
-              "sys_updated_on": 75,
-              "unverified": 76,
-              "vendor": 77,
-              "warranty_expiration": 78
-            },
-            "renameByName": {
-              "ldc_region": "",
-              "vm_name": ""
-            }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "name"
-              }
-            ]
-          }
-        },
         {
           "id": "organize",
           "options": {
@@ -778,24 +349,8 @@
               "sys_updated_on": 14
             },
             "renameByName": {
+              "cmdb_ci_kubernetes_node": "Kubernetes Node",
               "code_size": ""
-            }
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "name": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              },
-              "sys_class_name": {
-                "aggregations": [],
-                "operation": "groupby"
-              }
             }
           }
         }
@@ -906,9 +461,9 @@
           "metricType": "$metricType",
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Get row count from query",
+            "label": "Row Count",
+            "value": "Row_Count"
           },
           "service": "$service",
           "source": "$source",
@@ -1095,72 +650,9 @@
               "warranty_expiration": 78
             },
             "renameByName": {
+              "cmdb_ci_kubernetes_service": "Kubernetes Service",
               "ldc_region": "",
               "vm_name": ""
-            }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "name"
-              }
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "app_function_state": true,
-              "aws_resource_name": true,
-              "cluster": true,
-              "event_timestamp": true,
-              "self_link": true
-            },
-            "indexByName": {
-              "cluster": 15,
-              "discovery_source": 8,
-              "event_timestamp": 16,
-              "fault_count": 9,
-              "first_discovered": 10,
-              "install_status": 11,
-              "k8s_uid": 17,
-              "last_discovered": 0,
-              "monitor": 6,
-              "name": 3,
-              "namespace": 5,
-              "operational_status": 2,
-              "port": 4,
-              "self_link": 18,
-              "sys_class_name": 1,
-              "sys_created_by": 12,
-              "sys_id": 7,
-              "sys_updated_by": 13,
-              "sys_updated_on": 14
-            },
-            "renameByName": {
-              "code_size": ""
-            }
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "name": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              },
-              "sys_class_name": {
-                "aggregations": [],
-                "operation": "groupby"
-              }
             }
           }
         }
@@ -1271,9 +763,9 @@
           "metricType": "$metricType",
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Get row count from query",
+            "label": "Row Count",
+            "value": "Row_Count"
           },
           "service": "$service",
           "source": "$source",
@@ -1460,72 +952,9 @@
               "warranty_expiration": 78
             },
             "renameByName": {
+              "cmdb_ci_kubernetes_pod": "Kubernetes Pod",
               "ldc_region": "",
               "vm_name": ""
-            }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "name"
-              }
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "app_function_state": true,
-              "aws_resource_name": true,
-              "cluster": true,
-              "event_timestamp": true,
-              "self_link": true
-            },
-            "indexByName": {
-              "cluster": 15,
-              "discovery_source": 8,
-              "event_timestamp": 16,
-              "fault_count": 9,
-              "first_discovered": 10,
-              "install_status": 11,
-              "k8s_uid": 17,
-              "last_discovered": 0,
-              "monitor": 6,
-              "name": 3,
-              "namespace": 5,
-              "operational_status": 2,
-              "port": 4,
-              "self_link": 18,
-              "sys_class_name": 1,
-              "sys_created_by": 12,
-              "sys_id": 7,
-              "sys_updated_by": 13,
-              "sys_updated_on": 14
-            },
-            "renameByName": {
-              "code_size": ""
-            }
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "name": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              },
-              "sys_class_name": {
-                "aggregations": [],
-                "operation": "groupby"
-              }
             }
           }
         }
@@ -1636,9 +1065,9 @@
           "metricType": "$metricType",
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Get row count from query",
+            "label": "Row Count",
+            "value": "Row_Count"
           },
           "service": "$service",
           "source": "$source",
@@ -1825,72 +1254,9 @@
               "warranty_expiration": 78
             },
             "renameByName": {
+              "cmdb_ci_kubernetes_deployment": "Kubernetes Deployment",
               "ldc_region": "",
               "vm_name": ""
-            }
-          }
-        },
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "name"
-              }
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "app_function_state": true,
-              "aws_resource_name": true,
-              "cluster": true,
-              "event_timestamp": true,
-              "self_link": true
-            },
-            "indexByName": {
-              "cluster": 15,
-              "discovery_source": 8,
-              "event_timestamp": 16,
-              "fault_count": 9,
-              "first_discovered": 10,
-              "install_status": 11,
-              "k8s_uid": 17,
-              "last_discovered": 0,
-              "monitor": 6,
-              "name": 3,
-              "namespace": 5,
-              "operational_status": 2,
-              "port": 4,
-              "self_link": 18,
-              "sys_class_name": 1,
-              "sys_created_by": 12,
-              "sys_id": 7,
-              "sys_updated_by": 13,
-              "sys_updated_on": 14
-            },
-            "renameByName": {
-              "code_size": ""
-            }
-          }
-        },
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "name": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              },
-              "sys_class_name": {
-                "aggregations": [],
-                "operation": "groupby"
-              }
             }
           }
         }
@@ -2542,7 +1908,7 @@
                 "properties": [
                   {
                     "id": "custom.width",
-                    "value": 179
+                    "value": null
                   }
                 ]
               },
@@ -2642,7 +2008,7 @@
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.0.2",
+          "pluginVersion": "8.1.0",
           "targets": [
             {
               "depends_on_toggle": "$dependsOnFilter",
@@ -4948,5 +4314,5 @@
   "timezone": "",
   "title": "Kubernetes",
   "uid": "H-YoYgWnz",
-  "version": 90
+  "version": 91
 }
