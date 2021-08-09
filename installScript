@@ -10,9 +10,9 @@ systemctl status grafana-server
 systemctl enable grafana-server
 
 cp ./grafana.ini /etc/grafana/grafana.ini
-cp ./novatec-sdg-panel /var/lib/grafana/plugins/novatec-sdg-panel
-cp ./servicenow-optimiz-plugin /var/lib/grafana/plugins/servicenow-optimiz-plugin
+cp -r ./novatec-sdg-panel /var/lib/grafana/plugins/novatec-sdg-panel
+cp -r ./servicenow-optimiz-plugin /var/lib/grafana/plugins/servicenow-optimiz-plugin
 cp ./dashboards/dashboards.yaml /etc/grafana/provisioning/dashboards/dashboards.yaml
-cp ./dashboards /var/lib/grafana/dashboards
+cp -r ./dashboards /var/lib/grafana/dashboards
 
 systemctl restart grafana-server
