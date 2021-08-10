@@ -6,7 +6,6 @@ yum install grafana -y
 
 systemctl daemon-reload
 systemctl start grafana-server
-systemctl status grafana-server
 systemctl enable grafana-server
 
 cp ./grafana.ini /etc/grafana/grafana.ini
@@ -16,3 +15,10 @@ cp ./dashboards/dashboards.yaml /etc/grafana/provisioning/dashboards/dashboards.
 cp -r ./dashboards /var/lib/grafana/dashboards
 
 systemctl restart grafana-server
+
+amazon-linux-extras install nginx1 -y
+
+cp ./nginx.conf /etc/nginx/nginx.conf
+
+systemctl enable nginx
+systemctl restart nginx
