@@ -1884,7 +1884,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "em_alert||source||source||group_sourceIN$group^sn_priority_groupIN$priority^severityIN$severity^descriptionLIKE$search (generic)",
         "description": null,
         "error": null,

@@ -50,7 +50,7 @@
   "annotations": {
     "list": [
       {
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "enable": true,
         "iconColor": "semi-dark-red",
         "mappings": {
@@ -103,7 +103,7 @@
         }
       },
       {
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "enable": true,
         "iconColor": "blue",
         "mappings": {
@@ -2635,7 +2635,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "nameINcmdb_ci_linux_server,cmdb_ci_win_server (classes)",
         "description": null,
         "error": null,
@@ -2658,7 +2658,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "sys_class_nameIN$ciClasses (cis_sysquery)",
         "description": null,
         "error": null,
@@ -2681,7 +2681,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (custom_kpis)",
         "description": null,
         "error": null,
@@ -2704,7 +2704,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (metric_names)",
         "description": null,
         "error": null,
@@ -2829,7 +2829,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci||$parentTopo||$childTopo||$namespaces (nested_classes)",
         "description": "Comma seperated list of classes to exclude from the topology",
         "error": null,
@@ -2874,7 +2874,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci||$parentTopo||$childTopo||$namespaces||$filterClasses (nested_cis)",
         "description": null,
         "error": null,

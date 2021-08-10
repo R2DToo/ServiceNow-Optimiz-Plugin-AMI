@@ -1712,7 +1712,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "nameLIKEserver (classes)",
         "description": null,
         "error": null,
@@ -1735,7 +1735,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "sys_class_nameIN$ciClasses (cis_sysquery)",
         "description": null,
         "error": null,
@@ -1758,7 +1758,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (custom_kpis)",
         "description": null,
         "error": null,
@@ -1781,7 +1781,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (metric_names)",
         "description": null,
         "error": null,

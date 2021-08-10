@@ -897,7 +897,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "nameLIKEcmdb_ci (classes)",
         "description": null,
         "error": null,
@@ -920,7 +920,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "sys_class_nameIN$ciClasses (cis_sysquery)",
         "description": null,
         "error": null,
@@ -943,7 +943,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "cmdb_key_value||key||key||configuration_itemIN$ci (generic)",
         "description": null,
         "error": null,

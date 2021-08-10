@@ -4240,7 +4240,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "sys_class_nameINcmdb_ci_kubernetes_cluster (cis_sysquery)",
         "description": null,
         "error": null,
@@ -4263,7 +4263,7 @@
       {
         "allValue": "",
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "undefined (kubernetes_namespaces)",
         "description": null,
         "error": null,

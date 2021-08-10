@@ -1431,7 +1431,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "cmdb_ci_azure_datacenter||name||region (generic)",
         "description": null,
         "error": null,

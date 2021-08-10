@@ -50,7 +50,7 @@
   "annotations": {
     "list": [
       {
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "enable": false,
         "iconColor": "semi-dark-red",
         "mappings": {
@@ -103,7 +103,7 @@
         }
       },
       {
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "enable": false,
         "iconColor": "blue",
         "mappings": {
@@ -2584,7 +2584,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "name=cmdb_ci_vm_instance (classes)",
         "description": null,
         "error": null,
@@ -2607,7 +2607,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "sys_class_nameIN$ciClasses (cis_sysquery)",
         "description": null,
         "error": null,
@@ -2630,7 +2630,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (custom_kpis)",
         "description": null,
         "error": null,
@@ -2653,7 +2653,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (metric_names)",
         "description": null,
         "error": null,
@@ -2778,7 +2778,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci||$parentTopo||$childTopo||$namespaces (nested_classes)",
         "description": "",
         "error": null,
@@ -2801,7 +2801,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci||$parentTopo||$childTopo||$namespaces||$filterClasses (nested_cis)",
         "description": null,
         "error": null,

@@ -2075,7 +2075,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "undefined (application_services)",
         "description": null,
         "error": null,
@@ -2097,7 +2097,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$service (cis)",
         "description": null,
         "error": null,
@@ -2120,7 +2120,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (metric_names)",
         "description": null,
         "error": null,
@@ -2245,7 +2245,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$service||$parentTopo||$childTopo||$namespaces||$dependsOnFilter (nested_classes)",
         "description": "Comma seperated list of classes to exclude from the topology",
         "error": null,
@@ -2290,7 +2290,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$service||$parentTopo||$childTopo||$namespaces||$filterClasses||$dependsOnFilter (nested_cis)",
         "description": null,
         "error": null,

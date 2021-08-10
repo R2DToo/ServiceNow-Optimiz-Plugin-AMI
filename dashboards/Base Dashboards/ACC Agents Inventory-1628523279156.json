@@ -2887,7 +2887,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "nameINcmdb_ci_linux_server,cmdb_ci_win_server (classes)",
         "description": null,
         "error": null,

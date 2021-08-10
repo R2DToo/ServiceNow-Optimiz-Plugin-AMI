@@ -1417,7 +1417,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "cmdb_ci_aws_datacenter||name||name||nameLIKEus (generic)",
         "description": null,
         "error": null,
