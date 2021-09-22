@@ -20,7 +20,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.0"
+      "version": "8.1.2"
     },
     {
       "type": "panel",
@@ -64,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1628523379457,
+  "iteration": 1630678985398,
   "links": [],
   "panels": [
     {
@@ -82,11 +82,11 @@
       "type": "row"
     },
     {
-      "datasource": "-- Dashboard --",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "blue",
+            "fixedColor": "#5865f2",
             "mode": "fixed"
           },
           "custom": {
@@ -109,10 +109,6 @@
               {
                 "color": "green",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
@@ -145,59 +141,43 @@
       "pluginVersion": "8.0.6",
       "targets": [
         {
-          "depends_on_toggle": "$dependsOnFilter",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
-          "panelId": 4,
+          "aggregateColumn": "value",
+          "groupBy": "key",
           "refId": "A",
-          "selectedQueryCategory": {
-            "description": "Get Timeseries metrics.",
-            "label": "Metrics",
-            "value": "Metrics"
+          "selectedAggregateType": {
+            "label": "COUNT",
+            "value": "COUNT"
           },
-          "service": "$service",
-          "source": "$source"
+          "selectedQueryCategory": {
+            "description": "Group by and apply aggregate functions to table data",
+            "label": "Aggregate",
+            "value": "Aggregate"
+          },
+          "sysparam_count": 0,
+          "sysparam_option1": [],
+          "sysparam_option2": [],
+          "sysparam_option3": [],
+          "sysparam_option4": [
+            {
+              "label": "",
+              "value": ""
+            }
+          ],
+          "sysparam_query": "configuration_item.sys_class_nameIN$ciClasses^configuration_itemIN$ci^keyIN$tag",
+          "tableName": {
+            "label": "Key Value (cmdb_key_value)",
+            "value": "cmdb_key_value"
+          }
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "transformations": [
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "key": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "tag": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              }
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "key": false
-            },
-            "indexByName": {},
-            "renameByName": {
-              "key": "",
-              "tag (count)": "count"
-            }
-          }
-        }
-      ],
+      "transformations": [],
       "transparent": true,
       "type": "barchart"
     },
     {
-      "datasource": "-- Dashboard --",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -222,7 +202,7 @@
               {
                 "id": "color",
                 "value": {
-                  "fixedColor": "red",
+                  "fixedColor": "#ed4245",
                   "mode": "fixed"
                 }
               }
@@ -237,7 +217,7 @@
               {
                 "id": "color",
                 "value": {
-                  "fixedColor": "green",
+                  "fixedColor": "#57f287",
                   "mode": "fixed"
                 }
               }
@@ -269,7 +249,7 @@
           "calcs": [
             "lastNotNull"
           ],
-          "fields": "/^sys_id \\(count\\)$/",
+          "fields": "",
           "values": true
         },
         "tooltip": {
@@ -279,44 +259,37 @@
       "pluginVersion": "8.0.6",
       "targets": [
         {
-          "depends_on_toggle": "$dependsOnFilter",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
-          "panelId": 14,
+          "aggregateColumn": "sys_id",
+          "groupBy": "status",
           "refId": "A",
-          "selectedQueryCategory": {
-            "description": "Get Timeseries metrics.",
-            "label": "Metrics",
-            "value": "Metrics"
+          "selectedAggregateType": {
+            "label": "COUNT",
+            "value": "COUNT"
           },
-          "service": "$service",
-          "source": "$source"
-        }
-      ],
-      "title": "Tag Compliance",
-      "transformations": [
-        {
-          "id": "groupBy",
-          "options": {
-            "fields": {
-              "configuration_item": {
-                "aggregations": [],
-                "operation": null
-              },
-              "status": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "sys_id": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              }
+          "selectedQueryCategory": {
+            "description": "Group by and apply aggregate functions to table data",
+            "label": "Aggregate",
+            "value": "Aggregate"
+          },
+          "sysparam_count": 0,
+          "sysparam_option1": [],
+          "sysparam_option2": [],
+          "sysparam_option3": [],
+          "sysparam_option4": [
+            {
+              "label": "",
+              "value": ""
             }
+          ],
+          "sysparam_query": "configuration_item.sys_class_nameIN$ciClasses^configuration_itemIN$ci^statusIN$compliance",
+          "tableName": {
+            "label": "Tag Policy Health Listing (sn_itom_tag_health_listing)",
+            "value": "sn_itom_tag_health_listing"
           }
         }
       ],
+      "title": "Tag Compliance",
+      "transformations": [],
       "transparent": true,
       "type": "piechart"
     },
@@ -431,23 +404,48 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.0",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
-          "depends_on_toggle": "$dependsOnFilter",
           "hide": false,
-          "metricName": "$metricName",
-          "metricType": "$metricType",
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Choose your own table to gather data from",
+            "label": "Table",
+            "value": "Table"
           },
-          "service": "$service",
-          "source": "$source",
-          "sysparam_query": "sys_class_nameIN$ciClasses",
-          "tableName": "cmdb_ci"
+          "sysparam_count": 0,
+          "sysparam_option1": [
+            {
+              "description": "sys_class_name",
+              "label": "Class",
+              "value": "sys_class_name"
+            }
+          ],
+          "sysparam_option2": [
+            {
+              "description": "=",
+              "label": "is",
+              "value": "="
+            }
+          ],
+          "sysparam_option3": [
+            {
+              "label": "$ciClasses",
+              "value": "$ciClasses"
+            }
+          ],
+          "sysparam_option4": [
+            {
+              "label": "",
+              "value": ""
+            }
+          ],
+          "tableName": {
+            "description": "cmdb_ci",
+            "label": "Configuration Item",
+            "value": "cmdb_ci"
+          }
         }
       ],
       "title": "CI's",
@@ -698,22 +696,111 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.0",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
-          "depends_on_toggle": "$dependsOnFilter",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
+          "hide": false,
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Choose your own table to gather data from",
+            "label": "Table",
+            "value": "Table"
           },
-          "service": "$service",
-          "source": "$source",
-          "sysparam_query": "configuration_item.sys_class_nameIN$ciClasses^configuration_itemIN$ci^keyIN$tag",
-          "tableName": "cmdb_key_value"
+          "selectedtableColumns": [
+            {
+              "description": "configuration_item.name",
+              "label": "Configuration item => Name",
+              "value": "configuration_item.name"
+            },
+            {
+              "description": "key",
+              "label": "Key",
+              "value": "key"
+            },
+            {
+              "description": "value",
+              "label": "Value",
+              "value": "value"
+            },
+            {
+              "description": "sys_created_on",
+              "label": "Created",
+              "value": "sys_created_on"
+            },
+            {
+              "description": "sys_id",
+              "label": "Sys ID",
+              "value": "sys_id"
+            }
+          ],
+          "sysparam_count": 2,
+          "sysparam_option1": [
+            {
+              "description": "configuration_item.sys_class_name",
+              "label": "Configuration item => Class",
+              "value": "configuration_item.sys_class_name"
+            },
+            {
+              "description": "configuration_item.sys_id",
+              "label": "Configuration item => Sys ID",
+              "value": "configuration_item.sys_id"
+            },
+            {
+              "description": "key",
+              "label": "Key",
+              "value": "key"
+            }
+          ],
+          "sysparam_option2": [
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            }
+          ],
+          "sysparam_option3": [
+            {
+              "label": "$ciClasses",
+              "value": "$ciClasses"
+            },
+            {
+              "label": "$ci",
+              "value": "$ci"
+            },
+            {
+              "label": "$tag",
+              "value": "$tag"
+            }
+          ],
+          "sysparam_option4": [
+            {
+              "label": "",
+              "value": ""
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            }
+          ],
+          "tableName": {
+            "description": "cmdb_key_value",
+            "label": "Key Value",
+            "value": "cmdb_key_value"
+          }
         }
       ],
       "title": "Tags",
@@ -756,7 +843,8 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "auto"
+            "displayMode": "auto",
+            "filterable": true
           },
           "mappings": [],
           "thresholds": {
@@ -790,7 +878,7 @@
                         "index": 0
                       },
                       "Non Compliant": {
-                        "color": "red",
+                        "color": "#ed4245",
                         "index": 1
                       }
                     },
@@ -829,23 +917,116 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.0",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
-          "depends_on_toggle": "$dependsOnFilter",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
+          "hide": false,
           "refId": "A",
           "selectedQueryCategory": {
-            "description": "Get data from any table",
-            "label": "Generic",
-            "value": "Generic"
+            "description": "Choose your own table to gather data from",
+            "label": "Table",
+            "value": "Table"
           },
-          "service": "$service",
-          "source": "$source",
-          "sysparam_query": "configuration_item.sys_class_nameIN$ciClasses^configuration_itemIN$ci^statusIN$compliance",
-          "tableColumns": "sys_updated_on,configuration_item,datacenter,policy,service_account,status",
-          "tableName": "sn_itom_tag_health_listing"
+          "selectedtableColumns": [
+            {
+              "description": "sys_updated_on",
+              "label": "Updated",
+              "value": "sys_updated_on"
+            },
+            {
+              "description": "configuration_item.name",
+              "label": "Configuration item => Name",
+              "value": "configuration_item.name"
+            },
+            {
+              "description": "datacenter.name",
+              "label": "Datacenter => Name",
+              "value": "datacenter.name"
+            },
+            {
+              "description": "policy.policy_type",
+              "label": "Policy => Policy Type",
+              "value": "policy.policy_type"
+            },
+            {
+              "description": "service_account.name",
+              "label": "Cloud Service Account => Name",
+              "value": "service_account.name"
+            },
+            {
+              "description": "status",
+              "label": "Status",
+              "value": "status"
+            }
+          ],
+          "sysparam_count": 2,
+          "sysparam_option1": [
+            {
+              "description": "configuration_item.sys_class_name",
+              "label": "Configuration item => Class",
+              "value": "configuration_item.sys_class_name"
+            },
+            {
+              "description": "configuration_item.sys_id",
+              "label": "Configuration item => Sys ID",
+              "value": "configuration_item.sys_id"
+            },
+            {
+              "description": "status",
+              "label": "Status",
+              "value": "status"
+            }
+          ],
+          "sysparam_option2": [
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            }
+          ],
+          "sysparam_option3": [
+            {
+              "label": "$ciClasses",
+              "value": "$ciClasses"
+            },
+            {
+              "label": "$ci",
+              "value": "$ci"
+            },
+            {
+              "label": "$compliance",
+              "value": "$compliance"
+            }
+          ],
+          "sysparam_option4": [
+            {
+              "label": "",
+              "value": ""
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            }
+          ],
+          "tableName": {
+            "description": "sn_itom_tag_health_listing",
+            "label": "Tag Policy Health Listing",
+            "value": "sn_itom_tag_health_listing"
+          }
         }
       ],
       "title": "Tag Policy Health",
@@ -891,25 +1072,28 @@
   "refresh": "",
   "schemaVersion": 30,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "Tag",
+    "CI"
+  ],
   "templating": {
     "list": [
       {
         "allValue": null,
         "current": {},
         "datasource": "servicenow-optimiz-plugin",
-        "definition": "nameLIKEcmdb_ci (classes)",
+        "definition": "sys_db_object||label||name||nameLIKEcmdb_ci (generic)",
         "description": null,
         "error": null,
-        "hide": 0,
+        "hide": 2,
         "includeAll": false,
         "label": "Filter By Class",
         "multi": true,
         "name": "ciClasses",
         "options": [],
         "query": {
-          "namespace": "classes",
-          "rawQuery": "nameLIKEcmdb_ci"
+          "namespace": "generic",
+          "rawQuery": "sys_db_object||label||name||nameLIKEcmdb_ci"
         },
         "refresh": 1,
         "regex": "",
@@ -921,7 +1105,7 @@
         "allValue": null,
         "current": {},
         "datasource": "servicenow-optimiz-plugin",
-        "definition": "sys_class_nameIN$ciClasses (cis_sysquery)",
+        "definition": "cmdb_ci||name||sys_id||sys_class_nameIN$ciClasses (generic)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -931,8 +1115,8 @@
         "name": "ci",
         "options": [],
         "query": {
-          "namespace": "cis_sysquery",
-          "rawQuery": "sys_class_nameIN$ciClasses"
+          "namespace": "generic",
+          "rawQuery": "cmdb_ci||name||sys_id||sys_class_nameIN$ciClasses"
         },
         "refresh": 1,
         "regex": "",
@@ -1011,7 +1195,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Tag Health",
-  "uid": "y1rzi9W7k",
-  "version": 2
+  "title": "CI Tag Health",
+  "uid": "y1rzi9W7p",
+  "version": 1
 }

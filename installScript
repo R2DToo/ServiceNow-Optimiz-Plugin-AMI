@@ -19,6 +19,7 @@ systemctl restart grafana-server
 amazon-linux-extras install nginx1 -y
 
 cp ./nginx.conf /etc/nginx/nginx.conf
+cp -r ./images /etc/nginx/images
 
 systemctl enable nginx
 systemctl restart nginx
