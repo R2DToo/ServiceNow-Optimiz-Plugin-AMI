@@ -64,21 +64,8 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632425528764,
-  "links": [
-    {
-      "asDropdown": false,
-      "icon": "dashboard",
-      "includeVars": false,
-      "keepTime": true,
-      "tags": [],
-      "targetBlank": true,
-      "title": "Anomaly Insights",
-      "tooltip": "",
-      "type": "link",
-      "url": "/d/gcYL6tR8a?var-ciClasses=$ciClasses&var-ci=$ci"
-    }
-  ],
+  "iteration": 1632429467649,
+  "links": [],
   "panels": [
     {
       "datasource": null,
@@ -2413,5 +2400,5 @@
   "timezone": "",
   "title": "Compare CIs",
   "uid": "P29OUYS7z",
-  "version": 42
+  "version": 44
 }
