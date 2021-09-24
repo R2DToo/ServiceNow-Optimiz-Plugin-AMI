@@ -251,7 +251,7 @@
           },
           "id": 109,
           "options": {
-            "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Agent&nbsp;</span></p>",
+            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Agent&nbsp;</span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.1.3",
@@ -1229,7 +1229,7 @@
           },
           "id": 98,
           "options": {
-            "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Topology&nbsp; <span style=\"font-size: 10pt;\">*<em>select <strong>child</strong> and <strong>parent</strong> topo levels to widen topology view</em></span></span></p>",
+            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Topology&nbsp; <span style=\"font-size: 10pt;\">*<em>select <strong>child</strong> and <strong>parent</strong> topo levels to widen topology view</em></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.1.3",
@@ -1635,7 +1635,7 @@
       },
       "id": 118,
       "options": {
-        "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC Metric KPI Baselines<span style=\"font-size: 10pt;\"></span></span></p>",
+        "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC Metric KPI Baselines<span style=\"font-size: 10pt;\"></span></span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.1.3",
@@ -1985,7 +1985,7 @@
       },
       "id": 93,
       "options": {
-        "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Metric Intelligence&nbsp; <span style=\"font-size: 10pt;\">*<em>select any metrics from '<strong>All Metrics</strong>' filter</em></span></span></p>",
+        "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Metric Intelligence&nbsp; <span style=\"font-size: 10pt;\">*<em>select any metrics from '<strong>All Metrics</strong>' filter</em></span></span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.1.3",
@@ -2281,7 +2281,7 @@
           },
           "id": 94,
           "options": {
-            "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ITOM Alerts&nbsp;</span></p>",
+            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ITOM Alerts&nbsp;</span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.1.3",
@@ -3699,7 +3699,7 @@
           },
           "id": 184,
           "options": {
-            "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Software on Server<span style=\"font-size: 10pt;\"></span></span></p>",
+            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Software on Server<span style=\"font-size: 10pt;\"></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.1.3",
@@ -4130,7 +4130,7 @@
           },
           "id": 194,
           "options": {
-            "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Running Processes on Server<span style=\"font-size: 10pt;\"></span></span></p>",
+            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Running Processes on Server<span style=\"font-size: 10pt;\"></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.1.3",
@@ -4393,7 +4393,7 @@
           },
           "id": 99,
           "options": {
-            "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Change Records - scope based on CI relationships&nbsp; </span></p>",
+            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Change Records - scope based on CI relationships&nbsp; </span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.1.3",
@@ -4685,7 +4685,7 @@
           },
           "id": 100,
           "options": {
-            "content": "<p><img src=\"/images/assurantHomeInsurance2.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Checks&nbsp;</span></p>",
+            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Checks&nbsp;</span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.1.3",
