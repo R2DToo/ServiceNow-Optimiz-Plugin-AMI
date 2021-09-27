@@ -11,16 +11,10 @@
   ],
   "__requires": [
     {
-      "type": "panel",
-      "id": "barchart",
-      "name": "Bar chart",
-      "version": ""
-    },
-    {
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.3"
+      "version": "8.1.2"
     },
     {
       "type": "datasource",
@@ -70,7 +64,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632167025625,
+  "iteration": 1632773159742,
   "links": [],
   "panels": [
     {
@@ -100,38 +94,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">VMWare Virtual Machines</span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
-      "targets": [
-        {
-          "metricName": "$metricName",
-          "metricType": "$metricType",
-          "refId": "A",
-          "selectedQueryCategory": {
-            "description": "Get Timeseries metrics.",
-            "label": "Metrics",
-            "value": "Metrics"
-          },
-          "service": "$service",
-          "source": "$source"
-        }
-      ],
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "datasource": null,
-      "gridPos": {
-        "h": 2,
-        "w": 18,
-        "x": 5,
-        "y": 1
-      },
-      "id": 41,
-      "options": {
-        "content": "<p style=\"text-align: center;\"><span style=\"font-size: 14pt;\">VMs by Location</span></p>",
-        "mode": "html"
-      },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
           "metricName": "$metricName",
@@ -192,7 +155,7 @@
         "text": {},
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
           "aggregateColumn": "sys_id",
@@ -222,7 +185,7 @@
               "value": ""
             }
           ],
-          "sysparam_query": "locationIN$location^u_used_for=$used_for^guest_os_fullnameIN$os^state=on",
+          "sysparam_query": "guest_os_fullnameIN$os^state=on",
           "tableColumns": "vm_last_discovered,ldc_name,ldc_object_id,ldc_region,vm_cpus,vm_disks,vm_disks_size,vm_guest_os_fullname,vm_ip_address,vm_last_discovered,vm_memory,vm_monitor,vm_name,vm_nics,vm_object_id,vm_state,vm_sys_id,vm_terminated_on,vm_vm_inst_id,vm_sys_class_name",
           "tableName": {
             "description": "cmdb_ci_vmware_instance",
@@ -232,104 +195,6 @@
         }
       ],
       "transformations": [],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#57f287",
-                "value": null
-              }
-            ]
-          },
-          "unit": "short"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 21,
-        "x": 3,
-        "y": 3
-      },
-      "id": 29,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "area",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": true
-        },
-        "text": {},
-        "textMode": "auto"
-      },
-      "pluginVersion": "8.1.3",
-      "targets": [
-        {
-          "aggregateColumn": "sys_id",
-          "depends_on_toggle": "$dependsOnFilter",
-          "groupBy": "location",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
-          "refId": "A",
-          "selectedAggregateType": {
-            "label": "COUNT",
-            "value": "COUNT"
-          },
-          "selectedQueryCategory": {
-            "description": "Group by and apply aggregate functions to table data",
-            "label": "Aggregate",
-            "value": "Aggregate"
-          },
-          "service": "$service",
-          "source": "$source",
-          "sysparam_count": 0,
-          "sysparam_option1": [],
-          "sysparam_option2": [],
-          "sysparam_option3": [],
-          "sysparam_option4": [
-            {
-              "label": "",
-              "value": ""
-            }
-          ],
-          "sysparam_query": "locationIN$location^u_used_for=$used_for^guest_os_fullnameIN$os^state=on",
-          "tableColumns": "vm_last_discovered,ldc_name,ldc_object_id,ldc_region,vm_cpus,vm_disks,vm_disks_size,vm_guest_os_fullname,vm_ip_address,vm_last_discovered,vm_memory,vm_monitor,vm_name,vm_nics,vm_object_id,vm_state,vm_sys_id,vm_terminated_on,vm_vm_inst_id,vm_sys_class_name",
-          "tableName": {
-            "description": "cmdb_ci_vmware_instance",
-            "label": "VMware Virtual Machine Instance",
-            "value": "cmdb_ci_vmware_instance"
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "sortBy",
-          "options": {
-            "fields": {},
-            "sort": [
-              {
-                "field": "location"
-              }
-            ]
-          }
-        }
-      ],
       "transparent": true,
       "type": "stat"
     },
@@ -377,7 +242,7 @@
         "text": {},
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
           "aggregateColumn": "sys_id",
@@ -407,7 +272,7 @@
               "value": ""
             }
           ],
-          "sysparam_query": "locationIN$location^u_used_for=$used_for^guest_os_fullnameIN$os^state=off",
+          "sysparam_query": "guest_os_fullnameIN$os^state=off",
           "tableColumns": "vm_last_discovered,ldc_name,ldc_object_id,ldc_region,vm_cpus,vm_disks,vm_disks_size,vm_guest_os_fullname,vm_ip_address,vm_last_discovered,vm_memory,vm_monitor,vm_name,vm_nics,vm_object_id,vm_state,vm_sys_id,vm_terminated_on,vm_vm_inst_id,vm_sys_class_name",
           "tableName": {
             "description": "cmdb_ci_vmware_instance",
@@ -815,7 +680,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
           "hide": false,
@@ -836,7 +701,7 @@
             "label": "Name",
             "value": "name"
           },
-          "sysparam_count": 4,
+          "sysparam_count": 2,
           "sysparam_option1": [
             {
               "description": "state",
@@ -1019,12 +884,14 @@
             "excludeByName": {
               "ldc_name": true,
               "ldc_object_id": true,
+              "location": true,
               "percent_outage": true,
               "port": true,
               "service_account": true,
               "sys_mod_count": true,
               "sys_updated_by": true,
               "type": true,
+              "u_used_for": true,
               "vm_disks_size": true,
               "vm_guest_os_fullname": false,
               "vm_ip_address": true
@@ -1119,106 +986,6 @@
       },
       "id": 10,
       "panels": [
-        {
-          "datasource": null,
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "custom": {
-                "axisLabel": "",
-                "axisPlacement": "auto",
-                "axisSoftMin": 0,
-                "fillOpacity": 52,
-                "gradientMode": "hue",
-                "hideFrom": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
-                },
-                "lineWidth": 1
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "#ed4245",
-                    "value": null
-                  }
-                ]
-              },
-              "unit": "short"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 8,
-            "w": 24,
-            "x": 0,
-            "y": 26
-          },
-          "id": 38,
-          "options": {
-            "barWidth": 0.92,
-            "groupWidth": 0.7,
-            "legend": {
-              "calcs": [],
-              "displayMode": "hidden",
-              "placement": "bottom"
-            },
-            "orientation": "auto",
-            "showValue": "always",
-            "stacking": "none",
-            "text": {},
-            "tooltip": {
-              "mode": "single"
-            }
-          },
-          "pluginVersion": "8.1.3",
-          "targets": [
-            {
-              "aggregateColumn": "sys_id",
-              "depends_on_toggle": "$dependsOnFilter",
-              "groupBy": "location",
-              "metricName": "$metricName",
-              "metricType": "$metricType",
-              "refId": "A",
-              "selectedAggregateType": {
-                "label": "COUNT",
-                "value": "COUNT"
-              },
-              "selectedQueryCategory": {
-                "description": "Group by and apply aggregate functions to table data",
-                "label": "Aggregate",
-                "value": "Aggregate"
-              },
-              "service": "$service",
-              "source": "$source",
-              "sysparam_count": 0,
-              "sysparam_option1": [],
-              "sysparam_option2": [],
-              "sysparam_option3": [],
-              "sysparam_option4": [
-                {
-                  "label": "",
-                  "value": ""
-                }
-              ],
-              "sysparam_query": "locationIN$location^u_used_for=$used_for^guest_os_fullnameIN$os^state=off",
-              "tableColumns": "vm_last_discovered,ldc_name,ldc_object_id,ldc_region,vm_cpus,vm_disks,vm_disks_size,vm_guest_os_fullname,vm_ip_address,vm_last_discovered,vm_memory,vm_monitor,vm_name,vm_nics,vm_object_id,vm_state,vm_sys_id,vm_terminated_on,vm_vm_inst_id,vm_sys_class_name",
-              "tableName": {
-                "description": "cmdb_ci_vmware_instance",
-                "label": "VMware Virtual Machine Instance",
-                "value": "cmdb_ci_vmware_instance"
-              }
-            }
-          ],
-          "transformations": [],
-          "transparent": true,
-          "type": "barchart"
-        },
         {
           "datasource": null,
           "fieldConfig": {
@@ -1592,7 +1359,7 @@
             "h": 15,
             "w": 24,
             "x": 0,
-            "y": 34
+            "y": 26
           },
           "id": 37,
           "options": {
@@ -1600,7 +1367,7 @@
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.3",
+          "pluginVersion": "8.1.2",
           "targets": [
             {
               "hide": false,
@@ -1778,12 +1545,14 @@
                 "excludeByName": {
                   "ldc_name": true,
                   "ldc_object_id": true,
+                  "location": true,
                   "percent_outage": true,
                   "port": true,
                   "service_account": true,
                   "sys_mod_count": true,
                   "sys_updated_by": true,
                   "type": true,
+                  "u_used_for": true,
                   "vm_disks_size": true,
                   "vm_guest_os_fullname": false,
                   "vm_ip_address": true
@@ -1904,29 +1673,6 @@
         "allValue": null,
         "current": {},
         "datasource": "servicenow-optimiz-plugin",
-        "definition": "cmdb_ci_vmware_instance||location||location (generic)",
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": true,
-        "label": null,
-        "multi": true,
-        "name": "location",
-        "options": [],
-        "query": {
-          "namespace": "generic",
-          "rawQuery": "cmdb_ci_vmware_instance||location||location"
-        },
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "sort": 1,
-        "type": "query"
-      },
-      {
-        "allValue": null,
-        "current": {},
-        "datasource": "servicenow-optimiz-plugin",
         "definition": "cmdb_ci_vmware_instance||vcenter_ref||vcenter_ref (generic)",
         "description": null,
         "error": null,
@@ -1968,29 +1714,6 @@
         "skipUrlSync": false,
         "sort": 5,
         "type": "query"
-      },
-      {
-        "allValue": null,
-        "current": {},
-        "datasource": "servicenow-optimiz-plugin",
-        "definition": "cmdb_ci_vmware_instance||u_used_for||u_used_for||GROUPBYu_used_for (generic)",
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": true,
-        "label": null,
-        "multi": true,
-        "name": "used_for",
-        "options": [],
-        "query": {
-          "namespace": "generic",
-          "rawQuery": "cmdb_ci_vmware_instance||u_used_for||u_used_for||GROUPBYu_used_for"
-        },
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "type": "query"
       }
     ]
   },
@@ -2002,5 +1725,5 @@
   "timezone": "",
   "title": "vCenter Inventory",
   "uid": "bJCxbfW7x",
-  "version": 62
+  "version": 2
 }
