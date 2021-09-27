@@ -1,25 +1,25 @@
 #!/bin/sh
 
 yum update -y
-cp /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/grafana.repo /etc/yum.repos.d/grafana.repo
+cp /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/grafana.repo /etc/yum.repos.d/grafana.repo
 yum install grafana -y
 
 systemctl daemon-reload
 systemctl start grafana-server
 systemctl enable grafana-server
 
-cp /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/grafana.ini /etc/grafana/grafana.ini
-cp -r /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/novatec-sdg-panel /var/lib/grafana/plugins/novatec-sdg-panel
-cp -r /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/servicenow-optimiz-plugin /var/lib/grafana/plugins/servicenow-optimiz-plugin
-cp /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/dashboards/dashboards.yaml /etc/grafana/provisioning/dashboards/dashboards.yaml
-cp -r /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/dashboards /var/lib/grafana/dashboards
+cp /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/grafana.ini /etc/grafana/grafana.ini
+cp -r /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/novatec-sdg-panel /var/lib/grafana/plugins/novatec-sdg-panel
+cp -r /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/servicenow-optimiz-plugin /var/lib/grafana/plugins/servicenow-optimiz-plugin
+cp /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/dashboards/dashboards.yaml /etc/grafana/provisioning/dashboards/dashboards.yaml
+cp -r /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/dashboards /var/lib/grafana/dashboards
 
 systemctl restart grafana-server
 
 amazon-linux-extras install nginx1 -y
 
-cp /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/nginx.conf /etc/nginx/nginx.conf
-cp -r /home/ec2-user/ServiceNow-Optimiz-Plugin-AMI/images /etc/nginx/images
+cp /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/nginx.conf /etc/nginx/nginx.conf
+cp -r /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/images /etc/nginx/images
 
 systemctl enable nginx
 systemctl restart nginx
