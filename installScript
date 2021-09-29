@@ -9,6 +9,9 @@ systemctl start grafana-server
 systemctl enable grafana-server
 
 cp /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/grafana.ini /etc/grafana/grafana.ini
+fullname=$(/opt/aws/bin/ec2-metadata -p)
+domain=${fullname:17}
+sed -i "s/^;domain = localhost.*/domain = ${domain}/" /etc/grafana/grafana.ini
 cp -r /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/novatec-sdg-panel /var/lib/grafana/plugins/novatec-sdg-panel
 cp -r /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/servicenow-optimiz-plugin /var/lib/grafana/plugins/servicenow-optimiz-plugin
 cp /home/ec2-user/ServiceNow-Optimiz-AMI-Setup/dashboards/dashboards.yaml /etc/grafana/provisioning/dashboards/dashboards.yaml
