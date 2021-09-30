@@ -69,7 +69,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -82,7 +82,7 @@
       "type": "row"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 4,
@@ -119,7 +119,7 @@
       "type": "text"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 20,
@@ -472,7 +472,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -606,7 +606,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1117,7 +1117,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2258,7 +2258,7 @@
       "type": "table"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 20,
@@ -2290,7 +2290,7 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2300,7 +2300,7 @@
       "id": 23,
       "panels": [
         {
-          "datasource": null,
+          "datasource": "servicenow-optimiz-plugin",
           "description": "",
           "fieldConfig": {
             "defaults": {

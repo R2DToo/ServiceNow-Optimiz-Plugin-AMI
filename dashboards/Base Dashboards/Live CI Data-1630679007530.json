@@ -40,7 +40,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {

@@ -142,7 +142,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -289,7 +289,7 @@
       "type": "table"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -524,7 +524,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -630,7 +630,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -873,7 +873,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 6,
@@ -910,7 +910,7 @@
       "type": "text"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1817,7 +1817,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 5,
@@ -1854,7 +1854,7 @@
       "type": "text"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2849,7 +2849,7 @@
     },
     {
       "collapsed": false,
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2862,7 +2862,7 @@
       "type": "row"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 5,
@@ -2899,7 +2899,7 @@
       "type": "text"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {

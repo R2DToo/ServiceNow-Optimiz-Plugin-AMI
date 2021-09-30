@@ -338,7 +338,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "description": "",
       "gridPos": {
         "h": 19,

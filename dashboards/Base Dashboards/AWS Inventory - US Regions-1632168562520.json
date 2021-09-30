@@ -81,7 +81,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -94,7 +94,7 @@
       "type": "row"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -174,7 +174,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -290,7 +290,7 @@
       "type": "geomap"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -482,7 +482,7 @@
       "type": "barchart"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1099,7 +1099,7 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1109,7 +1109,7 @@
       "id": 10,
       "panels": [
         {
-          "datasource": null,
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1189,7 +1189,7 @@
           "type": "stat"
         },
         {
-          "datasource": null,
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1270,7 +1270,7 @@
           "type": "bargauge"
         },
         {
-          "datasource": null,
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {

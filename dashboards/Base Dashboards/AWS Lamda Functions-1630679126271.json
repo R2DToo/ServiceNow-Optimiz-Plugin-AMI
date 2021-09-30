@@ -52,7 +52,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -64,7 +64,7 @@
       "type": "row"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -206,7 +206,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -285,7 +285,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {

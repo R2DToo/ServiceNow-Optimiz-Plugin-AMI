@@ -68,7 +68,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 10,
@@ -105,7 +105,7 @@
       "type": "text"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -286,7 +286,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -833,7 +833,7 @@
       "type": "table"
     },
     {
-      "datasource": null,
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
         "w": 22,
