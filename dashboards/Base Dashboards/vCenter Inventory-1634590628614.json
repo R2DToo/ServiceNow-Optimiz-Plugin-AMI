@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.2"
+      "version": "8.2.1"
     },
     {
       "type": "datasource",
@@ -61,11 +61,13 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632773159742,
+  "iteration": 1634590615140,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -94,7 +96,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">VMWare Virtual Machines</span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "metricName": "$metricName",
@@ -131,11 +133,42 @@
           },
           "unit": "short"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Off"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ed4245",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "On"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#57f287",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 3,
-        "w": 3,
+        "h": 6,
+        "w": 4,
         "x": 0,
         "y": 3
       },
@@ -143,8 +176,8 @@
       "options": {
         "colorMode": "value",
         "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto",
+        "justifyMode": "center",
+        "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
             "sum"
@@ -152,13 +185,35 @@
           "fields": "",
           "values": true
         },
-        "text": {},
+        "text": {
+          "titleSize": 32,
+          "valueSize": 50
+        },
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "aggregateColumn": "sys_id",
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "state",
+                "label": "State",
+                "value": "state"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "on",
+                "value": "on"
+              },
+              "4": null
+            }
+          ],
           "depends_on_toggle": "$dependsOnFilter",
           "groupBy": "state",
           "metricName": "$metricName",
@@ -185,7 +240,7 @@
               "value": ""
             }
           ],
-          "sysparam_query": "guest_os_fullnameIN$os^state=on",
+          "sysparam_query": "guest_os_fullnameIN$os^vcenter_refIN$vCenter^stateINon,off",
           "tableColumns": "vm_last_discovered,ldc_name,ldc_object_id,ldc_region,vm_cpus,vm_disks,vm_disks_size,vm_guest_os_fullname,vm_ip_address,vm_last_discovered,vm_memory,vm_monitor,vm_name,vm_nics,vm_object_id,vm_state,vm_sys_id,vm_terminated_on,vm_vm_inst_id,vm_sys_class_name",
           "tableName": {
             "description": "cmdb_ci_vmware_instance",
@@ -194,94 +249,12 @@
           }
         }
       ],
-      "transformations": [],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": "servicenow-optimiz-plugin",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "fixedColor": "#ed4245",
-            "mode": "fixed"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#ed4245",
-                "value": null
-              }
-            ]
-          },
-          "unit": "short"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 3,
-        "x": 0,
-        "y": 6
-      },
-      "id": 36,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "sum"
-          ],
-          "fields": "",
-          "values": true
-        },
-        "text": {},
-        "textMode": "value_and_name"
-      },
-      "pluginVersion": "8.1.2",
-      "targets": [
+      "transformations": [
         {
-          "aggregateColumn": "sys_id",
-          "depends_on_toggle": "$dependsOnFilter",
-          "groupBy": "state",
-          "metricName": "$metricName",
-          "metricType": "$metricType",
-          "refId": "A",
-          "selectedAggregateType": {
-            "label": "COUNT",
-            "value": "COUNT"
-          },
-          "selectedQueryCategory": {
-            "description": "Group by and apply aggregate functions to table data",
-            "label": "Aggregate",
-            "value": "Aggregate"
-          },
-          "service": "$service",
-          "source": "$source",
-          "sysparam_count": 0,
-          "sysparam_option1": [],
-          "sysparam_option2": [],
-          "sysparam_option3": [],
-          "sysparam_option4": [
-            {
-              "label": "",
-              "value": ""
-            }
-          ],
-          "sysparam_query": "guest_os_fullnameIN$os^state=off",
-          "tableColumns": "vm_last_discovered,ldc_name,ldc_object_id,ldc_region,vm_cpus,vm_disks,vm_disks_size,vm_guest_os_fullname,vm_ip_address,vm_last_discovered,vm_memory,vm_monitor,vm_name,vm_nics,vm_object_id,vm_state,vm_sys_id,vm_terminated_on,vm_vm_inst_id,vm_sys_class_name",
-          "tableName": {
-            "description": "cmdb_ci_vmware_instance",
-            "label": "VMware Virtual Machine Instance",
-            "value": "cmdb_ci_vmware_instance"
-          }
+          "id": "rowsToFields",
+          "options": {}
         }
       ],
-      "transformations": [],
       "transparent": true,
       "type": "stat"
     },
@@ -680,9 +653,88 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "state",
+                "label": "State",
+                "value": "state"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "on",
+                "value": "on"
+              },
+              "4": null
+            },
+            {
+              "1": {
+                "description": "vcenter_ref.sys_id",
+                "label": "vCenter Reference => Sys ID",
+                "value": "vcenter_ref.sys_id"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$vCenter",
+                "value": "$vCenter"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "guest_os_fullname",
+                "label": "Guest OS Name",
+                "value": "guest_os_fullname"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$os",
+                "value": "$os"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "name",
+                "label": "Name",
+                "value": "name"
+              },
+              "2": {
+                "description": "LIKE",
+                "label": "contains",
+                "value": "LIKE"
+              },
+              "3": {
+                "label": "$nameSearch",
+                "value": "$nameSearch"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            }
+          ],
           "hide": false,
           "refId": "B",
           "selectedQueryCategory": {
@@ -807,8 +859,26 @@
           }
         },
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "label": "ci_sys_class_name",
+                "value": "ci_sys_class_name"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "cmdb_ci_vmware_instance",
+                "value": "cmdb_ci_vmware_instance"
+              },
+              "4": null
+            }
+          ],
           "hide": false,
-          "refId": "C",
+          "refId": "A",
           "selectedQueryCategory": {
             "description": "Choose your own table to gather data from",
             "label": "Table",
@@ -824,11 +894,33 @@
               "value": "massoc_environment"
             }
           ],
-          "sysparam_count": 0,
+          "sortBy": null,
+          "sysparam_count": 2,
           "sysparam_option1": [
             {
-              "label": "ci_sys_class_name",
-              "value": "ci_sys_class_name"
+              "description": "state",
+              "label": "State",
+              "value": "state"
+            },
+            {
+              "description": "vcenter_ref.sys_id",
+              "label": "vCenter Reference => Sys ID",
+              "value": "vcenter_ref.sys_id"
+            },
+            {
+              "description": "guest_os_fullname",
+              "label": "Guest OS Name",
+              "value": "guest_os_fullname"
+            },
+            {
+              "description": "u_used_for",
+              "label": "Used For",
+              "value": "u_used_for"
+            },
+            {
+              "description": "location.sys_id",
+              "label": "Location => Sys ID",
+              "value": "location.sys_id"
             }
           ],
           "sysparam_option2": [
@@ -836,18 +928,70 @@
               "description": "=",
               "label": "is",
               "value": "="
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
             }
           ],
           "sysparam_option3": [
             {
-              "label": "cmdb_ci_vmware_instance",
-              "value": "cmdb_ci_vmware_instance"
+              "label": "on",
+              "value": "on"
+            },
+            {
+              "label": "$vCenter",
+              "value": "$vCenter"
+            },
+            {
+              "label": "$os",
+              "value": "$os"
+            },
+            {
+              "label": "$used_for",
+              "value": "$used_for"
+            },
+            {
+              "label": "$location",
+              "value": "$location"
             }
           ],
           "sysparam_option4": [
             {
               "label": "",
               "value": ""
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
             }
           ],
           "tableName": {
@@ -1080,7 +1224,7 @@
                   {
                     "id": "color",
                     "value": {
-                      "fixedColor": "#ed4245",
+                      "fixedColor": "#57f287",
                       "mode": "fixed"
                     }
                   },
@@ -1361,15 +1505,94 @@
             "x": 0,
             "y": 26
           },
-          "id": 37,
+          "id": 41,
           "options": {
             "frameIndex": 2,
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.2",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "description": "state",
+                    "label": "State",
+                    "value": "state"
+                  },
+                  "2": {
+                    "description": "=",
+                    "label": "is",
+                    "value": "="
+                  },
+                  "3": {
+                    "label": "off",
+                    "value": "off"
+                  },
+                  "4": null
+                },
+                {
+                  "1": {
+                    "description": "vcenter_ref.sys_id",
+                    "label": "vCenter Reference => Sys ID",
+                    "value": "vcenter_ref.sys_id"
+                  },
+                  "2": {
+                    "description": "IN",
+                    "label": "is one of",
+                    "value": "IN"
+                  },
+                  "3": {
+                    "label": "$vCenter",
+                    "value": "$vCenter"
+                  },
+                  "4": {
+                    "label": "AND",
+                    "value": "^"
+                  }
+                },
+                {
+                  "1": {
+                    "description": "guest_os_fullname",
+                    "label": "Guest OS Name",
+                    "value": "guest_os_fullname"
+                  },
+                  "2": {
+                    "description": "IN",
+                    "label": "is one of",
+                    "value": "IN"
+                  },
+                  "3": {
+                    "label": "$os",
+                    "value": "$os"
+                  },
+                  "4": {
+                    "label": "AND",
+                    "value": "^"
+                  }
+                },
+                {
+                  "1": {
+                    "description": "name",
+                    "label": "Name",
+                    "value": "name"
+                  },
+                  "2": {
+                    "description": "LIKE",
+                    "label": "contains",
+                    "value": "LIKE"
+                  },
+                  "3": {
+                    "label": "$nameSearch",
+                    "value": "$nameSearch"
+                  },
+                  "4": {
+                    "label": "AND",
+                    "value": "^"
+                  }
+                }
+              ],
               "hide": false,
               "refId": "B",
               "selectedQueryCategory": {
@@ -1405,7 +1628,16 @@
                   "label": "Guest OS Name",
                   "value": "guest_os_fullname"
                 },
-                null
+                {
+                  "description": "u_used_for",
+                  "label": "Used For",
+                  "value": "u_used_for"
+                },
+                {
+                  "description": "location.sys_id",
+                  "label": "Location => Sys ID",
+                  "value": "location.sys_id"
+                }
               ],
               "sysparam_option2": [
                 {
@@ -1427,12 +1659,17 @@
                   "description": "IN",
                   "label": "is one of",
                   "value": "IN"
+                },
+                {
+                  "description": "IN",
+                  "label": "is one of",
+                  "value": "IN"
                 }
               ],
               "sysparam_option3": [
                 {
-                  "label": "off",
-                  "value": "off"
+                  "label": "on",
+                  "value": "on"
                 },
                 {
                   "label": "$vCenter",
@@ -1443,14 +1680,26 @@
                   "value": "$os"
                 },
                 {
-                  "label": "$datacenter",
-                  "value": "$datacenter"
+                  "label": "$used_for",
+                  "value": "$used_for"
+                },
+                {
+                  "label": "$location",
+                  "value": "$location"
                 }
               ],
               "sysparam_option4": [
                 {
                   "label": "",
                   "value": ""
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
                 },
                 {
                   "label": "AND",
@@ -1468,8 +1717,26 @@
               }
             },
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "label": "ci_sys_class_name",
+                    "value": "ci_sys_class_name"
+                  },
+                  "2": {
+                    "description": "=",
+                    "label": "is",
+                    "value": "="
+                  },
+                  "3": {
+                    "label": "cmdb_ci_vmware_instance",
+                    "value": "cmdb_ci_vmware_instance"
+                  },
+                  "4": null
+                }
+              ],
               "hide": false,
-              "refId": "C",
+              "refId": "A",
               "selectedQueryCategory": {
                 "description": "Choose your own table to gather data from",
                 "label": "Table",
@@ -1485,11 +1752,33 @@
                   "value": "massoc_environment"
                 }
               ],
-              "sysparam_count": 0,
+              "sortBy": null,
+              "sysparam_count": 2,
               "sysparam_option1": [
                 {
-                  "label": "ci_sys_class_name",
-                  "value": "ci_sys_class_name"
+                  "description": "state",
+                  "label": "State",
+                  "value": "state"
+                },
+                {
+                  "description": "vcenter_ref.sys_id",
+                  "label": "vCenter Reference => Sys ID",
+                  "value": "vcenter_ref.sys_id"
+                },
+                {
+                  "description": "guest_os_fullname",
+                  "label": "Guest OS Name",
+                  "value": "guest_os_fullname"
+                },
+                {
+                  "description": "u_used_for",
+                  "label": "Used For",
+                  "value": "u_used_for"
+                },
+                {
+                  "description": "location.sys_id",
+                  "label": "Location => Sys ID",
+                  "value": "location.sys_id"
                 }
               ],
               "sysparam_option2": [
@@ -1497,18 +1786,70 @@
                   "description": "=",
                   "label": "is",
                   "value": "="
+                },
+                {
+                  "description": "IN",
+                  "label": "is one of",
+                  "value": "IN"
+                },
+                {
+                  "description": "IN",
+                  "label": "is one of",
+                  "value": "IN"
+                },
+                {
+                  "description": "IN",
+                  "label": "is one of",
+                  "value": "IN"
+                },
+                {
+                  "description": "IN",
+                  "label": "is one of",
+                  "value": "IN"
                 }
               ],
               "sysparam_option3": [
                 {
-                  "label": "cmdb_ci_vmware_instance",
-                  "value": "cmdb_ci_vmware_instance"
+                  "label": "on",
+                  "value": "on"
+                },
+                {
+                  "label": "$vCenter",
+                  "value": "$vCenter"
+                },
+                {
+                  "label": "$os",
+                  "value": "$os"
+                },
+                {
+                  "label": "$used_for",
+                  "value": "$used_for"
+                },
+                {
+                  "label": "$location",
+                  "value": "$location"
                 }
               ],
               "sysparam_option4": [
                 {
                   "label": "",
                   "value": ""
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
                 }
               ],
               "tableName": {
@@ -1642,7 +1983,7 @@
     }
   ],
   "refresh": "",
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1725,5 +2066,5 @@
   "timezone": "",
   "title": "vCenter Inventory",
   "uid": "bJCxbfW7x",
-  "version": 2
+  "version": 10
 }

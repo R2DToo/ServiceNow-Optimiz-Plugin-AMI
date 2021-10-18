@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.3"
+      "version": "8.2.1"
     },
     {
       "type": "datasource",
@@ -121,10 +121,11 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632176420752,
+  "iteration": 1634590488998,
   "links": [
     {
       "asDropdown": false,
@@ -139,6 +140,7 @@
       "url": "/d/FUyeXrn7z?var-node=$ciName"
     }
   ],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -214,7 +216,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "panelId": 50,
@@ -275,7 +277,8 @@
               "secondary_alerts": true,
               "start_time": true,
               "sys_created_on": true,
-              "sys_id": true
+              "sys_id": true,
+              "uiAction": true
             },
             "indexByName": {},
             "renameByName": {
@@ -380,7 +383,7 @@
         "text": {},
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "aggregateColumn": "event_count",
@@ -571,7 +574,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "depends_on_toggle": "$dependsOnFilter",
@@ -702,6 +705,45 @@
       },
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "sys_id",
+                "label": "Sys ID",
+                "value": "sys_id"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "$sys_id",
+                "value": "$sys_id"
+              },
+              "4": null
+            },
+            {
+              "1": {
+                "description": "parent.sys_id",
+                "label": "Parent => Sys ID",
+                "value": "parent.sys_id"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "$sys_id",
+                "value": "$sys_id"
+              },
+              "4": {
+                "label": "^OR",
+                "value": "^OR"
+              }
+            }
+          ],
           "elasticSearch": "",
           "refId": "A",
           "selectedQueryCategory": {
@@ -824,7 +866,7 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "panelId": 50,
@@ -885,7 +927,7 @@
         "content": "<p><span style=\"font-size: 14pt;\"><span style=\"color: #5865f2;\">Primary</span> / Actionable Alert<br /></span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "refId": "A",
@@ -1609,9 +1651,17 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          ],
           "depends_on_toggle": "$dependsOnFilter",
           "metricName": "$metricName",
           "metricType": "$metricType",
@@ -1768,7 +1818,7 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "panelId": 53,
@@ -1829,7 +1879,7 @@
         "content": "<p><span style=\"font-size: 14pt;\"><span style=\"color: #eb459e;\">Secondary</span> / Correlated Alerts<br /></span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "refId": "A",
@@ -2505,9 +2555,17 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          ],
           "depends_on_toggle": "$dependsOnFilter",
           "metricName": "$metricName",
           "metricType": "$metricType",
@@ -2657,71 +2715,6 @@
           "sysparam_query": "parent.sys_id=$sys_id^descriptionLIKE$search",
           "tableName": {
             "label": "Grouped Alert (em_agg_group_alert)",
-            "value": "em_agg_group_alert"
-          }
-        },
-        {
-          "hide": false,
-          "refId": "B",
-          "selectedQueryCategory": {
-            "description": "Get data from Database View tables",
-            "label": "Database Views",
-            "value": "Database_Views"
-          },
-          "selectedtableColumns": [
-            {
-              "label": "Source Rule => Name",
-              "value": "source_rule.name"
-            },
-            {
-              "label": "Alert => Sys ID",
-              "value": "alert_id.sys_id"
-            }
-          ],
-          "sysparam_count": 1,
-          "sysparam_option1": [
-            {
-              "label": "Alert => Parent",
-              "value": "alert_id.parent"
-            },
-            {
-              "label": "Alert => State",
-              "value": "alert_id.state"
-            }
-          ],
-          "sysparam_option2": [
-            {
-              "label": "is",
-              "value": "="
-            },
-            {
-              "label": "is not",
-              "value": "!="
-            }
-          ],
-          "sysparam_option3": [
-            {
-              "label": "$sys_id",
-              "value": "$sys_id"
-            },
-            {
-              "label": "Closed",
-              "value": "Closed"
-            }
-          ],
-          "sysparam_option4": [
-            {
-              "label": "",
-              "value": ""
-            },
-            {
-              "label": "AND",
-              "value": "^"
-            }
-          ],
-          "tableName": {
-            "description": "em_agg_group_alert",
-            "label": "Grouped Alert",
             "value": "em_agg_group_alert"
           }
         }
@@ -2874,7 +2867,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"21\" height=\"21\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Related Changes<br /></span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "refId": "A",
@@ -3049,9 +3042,17 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          ],
           "refId": "A",
           "selectedChangeTypeList": {
             "description": "Ignore CI selection and use sysparam_query",
@@ -3106,7 +3107,7 @@
     }
   ],
   "refresh": "",
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -3158,8 +3159,8 @@
       {
         "current": {
           "selected": false,
-          "text": "59694c8adb96749018b3da75ca961966",
-          "value": "59694c8adb96749018b3da75ca961966"
+          "text": "edf231dddb1738102edf1f0139961920",
+          "value": "edf231dddb1738102edf1f0139961920"
         },
         "description": null,
         "error": null,
@@ -3169,11 +3170,11 @@
         "options": [
           {
             "selected": false,
-            "text": "45b908cedb96749018b3da75ca961986",
-            "value": "45b908cedb96749018b3da75ca961986"
+            "text": "59694c8adb96749018b3da75ca961966",
+            "value": "59694c8adb96749018b3da75ca961966"
           }
         ],
-        "query": "59694c8adb96749018b3da75ca961966",
+        "query": "edf231dddb1738102edf1f0139961920",
         "skipUrlSync": false,
         "type": "textbox"
       },
@@ -3225,7 +3226,7 @@
         "allValue": null,
         "current": {},
         "datasource": "servicenow-optimiz-plugin",
-        "definition": "em_alert||cmdb_ci.name||cmdb_ci||state!=Closed^sys_id=$sys_id^ORparent.sys_id=$sys_id (generic)",
+        "definition": "em_alert||cmdb_ci||cmdb_ci||state!=Closed^sys_id=$sys_id^ORparent.sys_id=$sys_id (generic)",
         "description": null,
         "error": null,
         "hide": 2,
@@ -3236,7 +3237,7 @@
         "options": [],
         "query": {
           "namespace": "generic",
-          "rawQuery": "em_alert||cmdb_ci.name||cmdb_ci||state!=Closed^sys_id=$sys_id^ORparent.sys_id=$sys_id"
+          "rawQuery": "em_alert||cmdb_ci||cmdb_ci||state!=Closed^sys_id=$sys_id^ORparent.sys_id=$sys_id"
         },
         "refresh": 1,
         "regex": "",
@@ -3270,12 +3271,12 @@
     ]
   },
   "time": {
-    "from": "2021-09-01T01:40:34.000Z",
+    "from": "2021-10-18T18:30:39.000Z",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Related Alerts",
   "uid": "v_aus7Z7x",
-  "version": 53
+  "version": 2
 }

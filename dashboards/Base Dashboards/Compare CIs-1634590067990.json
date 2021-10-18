@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.3"
+      "version": "8.2.1"
     },
     {
       "type": "datasource",
@@ -61,11 +61,26 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632429467649,
-  "links": [],
+  "iteration": 1634590062298,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "dashboard",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "Anomaly Insights",
+      "tooltip": "",
+      "type": "link",
+      "url": "/d/gcYL6tR8a?var-ciClasses=$ciClasses&${ci:queryparam}"
+    }
+  ],
+  "liveNow": false,
   "panels": [
     {
       "datasource": "servicenow-optimiz-plugin",
@@ -80,7 +95,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Select multiple <span style=\"color: #2dc26b;\">Hosts</span> from filter ☝<span style=\"font-size: 10pt;\"></span></span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "refId": "A",
@@ -115,7 +130,7 @@
       },
       "id": 4,
       "panels": [],
-      "title": "Compare CIs:  $cis",
+      "title": "Compare CIs:  $ci",
       "type": "row"
     },
     {
@@ -703,9 +718,28 @@
           }
         ]
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "cmdb_ci.sys_id",
+                "label": "Host => Sys ID",
+                "value": "cmdb_ci.sys_id"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$ci",
+                "value": "$ci"
+              },
+              "4": null
+            }
+          ],
           "depends_on_toggle": "$dependsOnFilter",
           "metricName": "/cpu|memory/",
           "metricType": "*",
@@ -1080,7 +1114,7 @@
             "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ITOM Alerts <span style=\"color: #2dc26b;\"></span><span style=\"font-size: 10pt;\"></span></span></p>",
             "mode": "html"
           },
-          "pluginVersion": "8.1.3",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
               "refId": "A",
@@ -1737,9 +1771,28 @@
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.3",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "description": "cmdb_ci.sys_id",
+                    "label": "Host => Sys ID",
+                    "value": "cmdb_ci.sys_id"
+                  },
+                  "2": {
+                    "description": "IN",
+                    "label": "is one of",
+                    "value": "IN"
+                  },
+                  "3": {
+                    "label": "$ci",
+                    "value": "$ci"
+                  },
+                  "4": null
+                }
+              ],
               "depends_on_toggle": "$dependsOnFilter",
               "metricName": "$metricName",
               "metricType": "$metricType",
@@ -1874,7 +1927,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Metric Intelligence&nbsp; <span style=\"font-size: 10pt;\">*<em>select any metrics from '<strong>All Metrics</strong>' filter</em></span></span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "refId": "A",
@@ -1951,7 +2004,7 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
+        "w": 24,
         "x": 0,
         "y": 15
       },
@@ -1973,6 +2026,25 @@
       "repeatDirection": "h",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "cmdb_ci.sys_id",
+                "label": "Host => Sys ID",
+                "value": "cmdb_ci.sys_id"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$ci",
+                "value": "$ci"
+              },
+              "4": null
+            }
+          ],
           "metricAnomaly": "false",
           "metricName": "$allMetrics",
           "metricType": "*",
@@ -2029,7 +2101,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 31
+        "y": 23
       },
       "id": 26,
       "panels": [
@@ -2039,14 +2111,14 @@
             "h": 2,
             "w": 10,
             "x": 0,
-            "y": 14
+            "y": 24
           },
           "id": 47,
           "options": {
             "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Change Records&nbsp; </span></p>",
             "mode": "html"
           },
-          "pluginVersion": "8.1.3",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
               "refId": "A",
@@ -2225,16 +2297,35 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 16
+            "y": 26
           },
           "id": 49,
           "options": {
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.3",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "description": "cmdb_ci.sys_id",
+                    "label": "Host => Sys ID",
+                    "value": "cmdb_ci.sys_id"
+                  },
+                  "2": {
+                    "description": "IN",
+                    "label": "is one of",
+                    "value": "IN"
+                  },
+                  "3": {
+                    "label": "$ci",
+                    "value": "$ci"
+                  },
+                  "4": null
+                }
+              ],
               "metricName": "$metricName",
               "metricType": "$metricType",
               "refId": "A",
@@ -2262,7 +2353,7 @@
                   "value": ""
                 }
               ],
-              "sysparam_query": "cmdb_ciIN$ci"
+              "sysparam_query": "cmdb_ciIN$ci^sys_created_on>=javascript:gs.beginningOfLast30Days()"
             }
           ],
           "title": "Change Records",
@@ -2316,7 +2407,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -2348,7 +2439,7 @@
         "allValue": null,
         "current": {},
         "datasource": "servicenow-optimiz-plugin",
-        "definition": "cmdb_ci||name||sys_id||sys_class_nameIN$ciClasses (generic)",
+        "definition": "sn_agent_ci_extended_info||cmdb_ci||cmdb_ci||cmdb_ci.sys_class_nameIN$ciClasses^GROUPBYcmdb_ci (generic)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -2359,7 +2450,7 @@
         "options": [],
         "query": {
           "namespace": "generic",
-          "rawQuery": "cmdb_ci||name||sys_id||sys_class_nameIN$ciClasses"
+          "rawQuery": "sn_agent_ci_extended_info||cmdb_ci||cmdb_ci||cmdb_ci.sys_class_nameIN$ciClasses^GROUPBYcmdb_ci"
         },
         "refresh": 1,
         "regex": "",
@@ -2400,5 +2491,5 @@
   "timezone": "",
   "title": "Compare CIs",
   "uid": "P29OUYS7z",
-  "version": 44
+  "version": 5
 }

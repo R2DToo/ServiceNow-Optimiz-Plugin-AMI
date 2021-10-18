@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.2"
+      "version": "8.2.1"
     },
     {
       "type": "datasource",
@@ -61,11 +61,13 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632773072898,
+  "iteration": 1634589979087,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -85,7 +87,7 @@
       "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 2,
-        "w": 6,
+        "w": 24,
         "x": 0,
         "y": 1
       },
@@ -94,7 +96,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Agent Client Collectors</span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "refId": "A",
@@ -124,7 +126,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
+            "fixedColor": "#57f287",
+            "mode": "fixed"
           },
           "mappings": [],
           "noValue": "0",
@@ -136,7 +139,8 @@
                 "value": null
               }
             ]
-          }
+          },
+          "unit": "short"
         },
         "overrides": [
           {
@@ -197,10 +201,10 @@
         "text": {},
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
-          "panelId": 51,
+          "panelId": 15,
           "refId": "A",
           "selectedQueryCategory": {
             "description": "Get Timeseries metrics.",
@@ -221,30 +225,21 @@
       ],
       "transformations": [
         {
-          "id": "groupBy",
+          "id": "filterByValue",
           "options": {
-            "fields": {
-              "cmdb_ci.sys_id": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "aggregate"
-              },
-              "data_collection": {
-                "aggregations": [],
-                "operation": null
-              },
-              "status": {
-                "aggregations": [],
-                "operation": "groupby"
-              },
-              "time_of_event": {
-                "aggregations": [
-                  "count"
-                ],
-                "operation": "groupby"
+            "filters": [
+              {
+                "config": {
+                  "id": "equal",
+                  "options": {
+                    "value": "Up"
+                  }
+                },
+                "fieldName": "status"
               }
-            }
+            ],
+            "match": "all",
+            "type": "include"
           }
         }
       ],
@@ -395,16 +390,16 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 209
+                "value": 272
               }
             ]
           }
         ]
       },
       "gridPos": {
-        "h": 4,
-        "w": 11,
-        "x": 4,
+        "h": 9,
+        "w": 12,
+        "x": 5,
         "y": 3
       },
       "id": 47,
@@ -412,9 +407,27 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "label": "mid_server.sys_id",
+                "value": "mid_server.sys_id"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$mid",
+                "value": "$mid"
+              },
+              "4": null
+            }
+          ],
           "refId": "A",
           "selectedQueryCategory": {
             "description": "Choose your own table to gather data from",
@@ -620,17 +633,17 @@
         ]
       },
       "gridPos": {
-        "h": 4,
-        "w": 11,
-        "x": 4,
-        "y": 7
+        "h": 8,
+        "w": 4,
+        "x": 19,
+        "y": 3
       },
       "id": 60,
       "options": {
         "colorMode": "value",
         "graphMode": "none",
         "justifyMode": "center",
-        "orientation": "auto",
+        "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -641,7 +654,7 @@
         "text": {},
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "panelId": 51,
@@ -756,10 +769,9 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "#57f287",
+            "fixedColor": "#ed4245",
             "mode": "fixed"
           },
-          "decimals": 0,
           "links": [],
           "mappings": [],
           "noValue": "0",
@@ -774,38 +786,7 @@
           },
           "unit": "short"
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Up"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "green",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Down"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "red",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 4,
@@ -817,22 +798,29 @@
       "links": [],
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
+        "graphMode": "none",
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [],
           "fields": "",
-          "limit": 100,
           "values": true
         },
         "text": {},
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "aggregateColumn": "sys_id",
+          "basic_sysparam": [
+            {
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          ],
           "groupBy": "status",
           "refId": "A",
           "selectedAggregateType": {
@@ -877,7 +865,7 @@
                 "fieldName": "status"
               }
             ],
-            "match": "any",
+            "match": "all",
             "type": "include"
           }
         }
@@ -1489,13 +1477,93 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "cmdb_ci.name",
+                "label": "Host => Name",
+                "value": "cmdb_ci.name"
+              },
+              "2": {
+                "description": "LIKE",
+                "label": "contains",
+                "value": "LIKE"
+              },
+              "3": {
+                "label": "$hostSearch",
+                "value": "$hostSearch"
+              },
+              "4": null
+            },
+            {
+              "1": {
+                "description": "cmdb_ci.sys_class_name",
+                "label": "Host => Class",
+                "value": "cmdb_ci.sys_class_name"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$ciClasses",
+                "value": "$ciClasses"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "mid.sys_id",
+                "label": "Mid => Sys ID",
+                "value": "mid.sys_id"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$mid",
+                "value": "$mid"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "status",
+                "label": "Status",
+                "value": "status"
+              },
+              "2": {
+                "description": "!=",
+                "label": "is not",
+                "value": "!="
+              },
+              "3": {
+                "label": "2",
+                "value": "2"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            }
+          ],
           "depends_on_toggle": "$dependsOnFilter",
           "metricName": "/cpu|memory/",
           "metricType": "*",
           "refId": "A",
+          "rowLimit": "",
           "selectedAgentFilter": {
             "__isNew__": true,
             "label": "$ciClasses",
@@ -1762,14 +1830,52 @@
           }
         },
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "label": "ci_sys_class_name",
+                "value": "ci_sys_class_name"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$ciClasses",
+                "value": "$ciClasses"
+              },
+              "4": null
+            }
+          ],
+          "depends_on_toggle": "$dependsOnFilter",
           "hide": false,
+          "metricName": "/cpu|memory/",
+          "metricType": "*",
           "refId": "B",
-          "rowLimit": "",
+          "selectedAgentFilter": {
+            "__isNew__": true,
+            "label": "$ciClasses",
+            "value": "$ciClasses"
+          },
+          "selectedAgentFilterType": {
+            "description": "Get all agents matching the OS",
+            "label": "OS",
+            "value": "OS"
+          },
+          "selectedMetricNameList": [],
+          "selectedMetricTypeList": [
+            {
+              "label": "*",
+              "value": "*"
+            }
+          ],
           "selectedQueryCategory": {
             "description": "Choose your own table to gather data from",
             "label": "Table",
             "value": "Table"
           },
+          "selectedSourceList": [],
           "selectedtableColumns": [
             {
               "label": "ci_sys_id",
@@ -1780,14 +1886,67 @@
               "value": "massoc_environment"
             }
           ],
-          "sysparam_count": 0,
+          "service": "$service",
+          "source": "",
+          "sysparam_count": 2,
           "sysparam_option1": [
             {
-              "label": "ci_sys_class_name",
-              "value": "ci_sys_class_name"
+              "description": "status",
+              "label": "Status",
+              "value": "status"
+            },
+            {
+              "description": "mid.sys_id",
+              "label": "Mid => Sys ID",
+              "value": "mid.sys_id"
+            },
+            {
+              "description": "cmdb_ci.name",
+              "label": "Host => Name",
+              "value": "cmdb_ci.name"
+            },
+            {
+              "description": "cmdb_ci.environment",
+              "label": "Host => Environment",
+              "value": "cmdb_ci.environment"
+            },
+            {
+              "description": "cmdb_ci.environment",
+              "label": "Host => Environment",
+              "value": "cmdb_ci.environment"
+            },
+            {
+              "description": "cmdb_ci.support_group",
+              "label": "Host => Support group",
+              "value": "cmdb_ci.support_group"
             }
           ],
           "sysparam_option2": [
+            {
+              "description": "!=",
+              "label": "is not",
+              "value": "!="
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "LIKE",
+              "label": "contains",
+              "value": "LIKE"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
+            {
+              "description": "IN",
+              "label": "is one of",
+              "value": "IN"
+            },
             {
               "description": "IN",
               "label": "is one of",
@@ -1796,16 +1955,57 @@
           ],
           "sysparam_option3": [
             {
-              "label": "$ciClasses",
-              "value": "$ciClasses"
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "$mid",
+              "value": "$mid"
+            },
+            {
+              "label": "$hostSearch",
+              "value": "$hostSearch"
+            },
+            {
+              "label": "$usedFor",
+              "value": "$usedFor"
+            },
+            {
+              "label": "$usedFor",
+              "value": "$usedFor"
+            },
+            {
+              "label": "$supportGroup",
+              "value": "$supportGroup"
             }
           ],
           "sysparam_option4": [
             {
               "label": "",
               "value": ""
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
+            },
+            {
+              "label": "AND",
+              "value": "^"
             }
           ],
+          "sysparam_query": "agent_extended_info.status!=2^mid.name=MID1_PROD_ATL0WSNWP022",
           "tableName": {
             "label": "sa_service_list_view",
             "value": "sa_service_list_view"
@@ -1973,7 +2173,7 @@
         "content": "# \n❗ <em> If you see only 0-1 Checks Running, then check the MID logs and acc.yml for agent_cpu_threshold values: &nbsp; [ACC help](https://docs.servicenow.com/bundle/quebec-it-operations-management/page/product/agent-client-collector/task/acc-yml-view.html) &nbsp; | &nbsp;\n[ACC Architecture](https://docs.servicenow.com/bundle/quebec-it-operations-management/page/product/agent-client-collector/concept/acc-concept.html) &nbsp; | &nbsp;\n[AIOps Demo](https://vimeo.com/540269128/949eed601c)   ",
         "mode": "markdown"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "metricName": "$metricName",
@@ -2524,9 +2724,88 @@
             "showHeader": true,
             "sortBy": []
           },
-          "pluginVersion": "8.1.2",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "description": "cmdb_ci.name",
+                    "label": "Host => Name",
+                    "value": "cmdb_ci.name"
+                  },
+                  "2": {
+                    "description": "LIKE",
+                    "label": "contains",
+                    "value": "LIKE"
+                  },
+                  "3": {
+                    "label": "$hostSearch",
+                    "value": "$hostSearch"
+                  },
+                  "4": null
+                },
+                {
+                  "1": {
+                    "description": "cmdb_ci.sys_class_name",
+                    "label": "Host => Class",
+                    "value": "cmdb_ci.sys_class_name"
+                  },
+                  "2": {
+                    "description": "IN",
+                    "label": "is one of",
+                    "value": "IN"
+                  },
+                  "3": {
+                    "label": "$ciClasses",
+                    "value": "$ciClasses"
+                  },
+                  "4": {
+                    "label": "AND",
+                    "value": "^"
+                  }
+                },
+                {
+                  "1": {
+                    "description": "mid.sys_id",
+                    "label": "Mid => Sys ID",
+                    "value": "mid.sys_id"
+                  },
+                  "2": {
+                    "description": "IN",
+                    "label": "is one of",
+                    "value": "IN"
+                  },
+                  "3": {
+                    "label": "$mid",
+                    "value": "$mid"
+                  },
+                  "4": {
+                    "label": "AND",
+                    "value": "^"
+                  }
+                },
+                {
+                  "1": {
+                    "description": "status",
+                    "label": "Status",
+                    "value": "status"
+                  },
+                  "2": {
+                    "description": "=",
+                    "label": "is",
+                    "value": "="
+                  },
+                  "3": {
+                    "label": "2",
+                    "value": "2"
+                  },
+                  "4": {
+                    "label": "AND",
+                    "value": "^"
+                  }
+                }
+              ],
               "depends_on_toggle": "$dependsOnFilter",
               "metricName": "/cpu|memory/",
               "metricType": "*",
@@ -2744,14 +3023,52 @@
               }
             },
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "label": "ci_sys_class_name",
+                    "value": "ci_sys_class_name"
+                  },
+                  "2": {
+                    "description": "IN",
+                    "label": "is one of",
+                    "value": "IN"
+                  },
+                  "3": {
+                    "label": "$ciClasses",
+                    "value": "$ciClasses"
+                  },
+                  "4": null
+                }
+              ],
+              "depends_on_toggle": "$dependsOnFilter",
               "hide": false,
+              "metricName": "/cpu|memory/",
+              "metricType": "*",
               "refId": "B",
-              "rowLimit": "",
+              "selectedAgentFilter": {
+                "__isNew__": true,
+                "label": "$ciClasses",
+                "value": "$ciClasses"
+              },
+              "selectedAgentFilterType": {
+                "description": "Get all agents matching the OS",
+                "label": "OS",
+                "value": "OS"
+              },
+              "selectedMetricNameList": [],
+              "selectedMetricTypeList": [
+                {
+                  "label": "*",
+                  "value": "*"
+                }
+              ],
               "selectedQueryCategory": {
                 "description": "Choose your own table to gather data from",
                 "label": "Table",
                 "value": "Table"
               },
+              "selectedSourceList": [],
               "selectedtableColumns": [
                 {
                   "label": "ci_sys_id",
@@ -2762,14 +3079,57 @@
                   "value": "massoc_environment"
                 }
               ],
-              "sysparam_count": 0,
+              "service": "$service",
+              "source": "",
+              "sysparam_count": 2,
               "sysparam_option1": [
                 {
-                  "label": "ci_sys_class_name",
-                  "value": "ci_sys_class_name"
+                  "description": "status",
+                  "label": "Status",
+                  "value": "status"
+                },
+                {
+                  "description": "mid.sys_id",
+                  "label": "Mid => Sys ID",
+                  "value": "mid.sys_id"
+                },
+                {
+                  "description": "cmdb_ci.name",
+                  "label": "Host => Name",
+                  "value": "cmdb_ci.name"
+                },
+                {
+                  "description": "cmdb_ci.location",
+                  "label": "Host => Location",
+                  "value": "cmdb_ci.location"
+                },
+                {
+                  "description": "cmdb_ci.environment",
+                  "label": "Host => Environment",
+                  "value": "cmdb_ci.environment"
                 }
               ],
               "sysparam_option2": [
+                {
+                  "description": "=",
+                  "label": "is",
+                  "value": "="
+                },
+                {
+                  "description": "IN",
+                  "label": "is one of",
+                  "value": "IN"
+                },
+                {
+                  "description": "LIKE",
+                  "label": "contains",
+                  "value": "LIKE"
+                },
+                {
+                  "description": "IN",
+                  "label": "is one of",
+                  "value": "IN"
+                },
                 {
                   "description": "IN",
                   "label": "is one of",
@@ -2778,16 +3138,49 @@
               ],
               "sysparam_option3": [
                 {
-                  "label": "$ciClasses",
-                  "value": "$ciClasses"
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "$mid",
+                  "value": "$mid"
+                },
+                {
+                  "label": "$hostSearch",
+                  "value": "$hostSearch"
+                },
+                {
+                  "label": "$location",
+                  "value": "$location"
+                },
+                {
+                  "label": "$usedFor",
+                  "value": "$usedFor"
                 }
               ],
               "sysparam_option4": [
                 {
                   "label": "",
                   "value": ""
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
+                },
+                {
+                  "label": "AND",
+                  "value": "^"
                 }
               ],
+              "sysparam_query": "agent_extended_info.status!=2^mid.name=MID1_PROD_ATL0WSNWP022",
               "tableName": {
                 "label": "sa_service_list_view",
                 "value": "sa_service_list_view"
@@ -2912,7 +3305,7 @@
     }
   ],
   "refresh": "",
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -2995,5 +3388,5 @@
   "timezone": "",
   "title": "ACC Agents Inventory",
   "uid": "Onij2tR7k",
-  "version": 4
+  "version": 6
 }

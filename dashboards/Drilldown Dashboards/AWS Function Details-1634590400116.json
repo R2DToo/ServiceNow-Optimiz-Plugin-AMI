@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.2"
+      "version": "8.2.1"
     },
     {
       "type": "panel",
@@ -178,10 +178,11 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632180857969,
+  "iteration": 1634590214807,
   "links": [
     {
       "asDropdown": false,
@@ -199,6 +200,7 @@
       "url": ""
     }
   ],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -505,9 +507,28 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "sys_id",
+                "label": "Sys ID",
+                "value": "sys_id"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "$ci",
+                "value": "$ci"
+              },
+              "4": null
+            }
+          ],
           "hide": false,
           "refId": "A",
           "selectedQueryCategory": {
@@ -839,14 +860,14 @@
       "type": "row"
     },
     {
-      "datasource": "servicenow-optimiz-plugin",
+      "datasource": null,
       "gridPos": {
         "h": 14,
         "w": 12,
         "x": 0,
         "y": 6
       },
-      "id": 61,
+      "id": 71,
       "options": {
         "aggregationType": "app",
         "baselineRtUpper": "threshold",
@@ -869,7 +890,7 @@
           "type": "type"
         },
         "datasourceName": "servicenow-optimiz-plugin",
-        "drillDownLink": "",
+        "drillDownLink": "/d/AEOITnWnz?var-ci={node}&var-ciClasses={nodeClass}&var-childTopo=$childTopo&var-parentTopo=$parentTopo",
         "dummyDataSwitch": {
           "aggregationType": "app",
           "baselineRtUpper": "threshold",
@@ -930,20 +951,124 @@
         "filterEmptyConnections": false,
         "iconMapping": [
           {
-            "filename": "disk",
-            "pattern": "Disk Partition|Disk"
+            "filename": "agent",
+            "pattern": "Agent Client Collector"
           },
           {
-            "filename": "aws_filesystem",
+            "filename": "app_service",
+            "pattern": "Application"
+          },
+          {
+            "filename": "app_service",
+            "pattern": "Application Service"
+          },
+          {
+            "filename": "cluster",
+            "pattern": "Cluster"
+          },
+          {
+            "filename": "datacenter",
+            "pattern": "Datacenter"
+          },
+          {
+            "filename": "image",
+            "pattern": "Image"
+          },
+          {
+            "filename": "gateway",
+            "pattern": "Cloud Gateway"
+          },
+          {
+            "filename": "availability_set",
+            "pattern": "Availability Zone"
+          },
+          {
+            "filename": "db_sql",
+            "pattern": "Cloud DataBase"
+          },
+          {
+            "filename": "ip",
+            "pattern": "Cloud LB IPAddress"
+          },
+          {
+            "filename": "loadbalancer",
+            "pattern": "Cloud Load Balancer"
+          },
+          {
+            "filename": "cloud_function",
+            "pattern": "Cloud Function"
+          },
+          {
+            "filename": "storage",
+            "pattern": "Cloud Object Storage"
+          },
+          {
+            "filename": "group",
+            "pattern": "Compute Security Group"
+          },
+          {
+            "filename": "Account",
+            "pattern": "Cloud Service Account"
+          },
+          {
+            "filename": "cloud",
+            "pattern": "Cloud Network"
+          },
+          {
+            "filename": "virtual_machine2",
+            "pattern": "Virtual Machine Instance"
+          },
+          {
+            "filename": "directory",
             "pattern": "File System"
+          },
+          {
+            "filename": "datacenter",
+            "pattern": "AWS Datacenter"
+          },
+          {
+            "filename": "storage",
+            "pattern": "Storage Mapping"
+          },
+          {
+            "filename": "virtual_network",
+            "pattern": "VNIC Endpoint"
+          },
+          {
+            "filename": "dns",
+            "pattern": "DNS Name"
+          },
+          {
+            "filename": "route",
+            "pattern": "Subnet Endpoint"
+          },
+          {
+            "filename": "network_interface",
+            "pattern": "Cloud Mgmt Network Interface"
+          },
+          {
+            "filename": "db_mysql",
+            "pattern": "MySQL Instance"
+          },
+          {
+            "filename": "docker_engine",
+            "pattern": "Docker Engine"
+          },
+          {
+            "filename": "disk",
+            "pattern": "Disk Partition|Disk"
           },
           {
             "filename": "ip",
             "pattern": "IP Address"
           },
           {
-            "filename": "nic",
+            "filename": "network_interface",
             "pattern": "Network Adapter"
+          },
+          {
+            "filename": "storage",
+            "pattern": "Storage Device"
           },
           {
             "filename": "windows",
@@ -962,23 +1087,47 @@
             "pattern": "Kubernetes Pod"
           },
           {
+            "filename": "k8s-ns",
+            "pattern": "Kubernetes Namespace"
+          },
+          {
+            "filename": "k8s-deploy",
+            "pattern": "Kubernetes Deployment"
+          },
+          {
+            "filename": "k8s-cluster",
+            "pattern": "Kubernetes Cluster"
+          },
+          {
+            "filename": "k8s-node",
+            "pattern": "Kubernetes Node"
+          },
+          {
+            "filename": "k8s-ds",
+            "pattern": "Kubernetes DaemonSet|Kubernetes StatefulSet"
+          },
+          {
+            "filename": "loadbalance_svc",
+            "pattern": "Load Balancer Service"
+          },
+          {
+            "filename": "f5_loadbalancer",
+            "pattern": "F5 BIG-IP"
+          },
+          {
             "filename": "docker_container",
             "pattern": "Docker Container|Docker Image"
           },
           {
-            "filename": "manual_entrypoint",
-            "pattern": "Manual Endpoint"
-          },
-          {
-            "filename": "application_generic",
+            "filename": "app_service",
             "pattern": "ServiceNow Application Component"
           },
           {
-            "filename": "application_svc",
+            "filename": "app_service",
             "pattern": "ServiceNow Application"
           },
           {
-            "filename": "gear",
+            "filename": "server2",
             "pattern": "ServiceNow MID Server"
           },
           {
@@ -988,6 +1137,78 @@
           {
             "filename": "tag",
             "pattern": "Tag-Based Application Service"
+          },
+          {
+            "filename": "network_interface",
+            "pattern": "VMware vCenter Network"
+          },
+          {
+            "filename": "server",
+            "pattern": "ESX Server"
+          },
+          {
+            "filename": "virtual_machine2",
+            "pattern": "Virtual Machine Instance"
+          },
+          {
+            "filename": "server2",
+            "pattern": "Server Chassis"
+          },
+          {
+            "filename": "switch",
+            "pattern": "Switch|IP Switch"
+          },
+          {
+            "filename": "business_svc",
+            "pattern": "Business Service"
+          },
+          {
+            "filename": "router",
+            "pattern": "IP Router"
+          },
+          {
+            "filename": "db_sql",
+            "pattern": "MSFT SQL Instance"
+          },
+          {
+            "filename": "web_server",
+            "pattern": "Web Server"
+          },
+          {
+            "filename": "web",
+            "pattern": "HTTP"
+          },
+          {
+            "filename": "web_site",
+            "pattern": "Web Site"
+          },
+          {
+            "filename": "network_interface",
+            "pattern": "Router Interface"
+          },
+          {
+            "filename": "virtual_machine2",
+            "pattern": "Virtual Machine Instance"
+          },
+          {
+            "filename": "resource_group",
+            "pattern": "Resource Group"
+          },
+          {
+            "filename": "disk",
+            "pattern": "File System"
+          },
+          {
+            "filename": "network_interface",
+            "pattern": "Cloud Mgmt Network Interface"
+          },
+          {
+            "filename": "Account",
+            "pattern": "Cloud Service Account"
+          },
+          {
+            "filename": "availability_set",
+            "pattern": "Availability Zone"
           },
           {
             "filename": "default",
@@ -996,20 +1217,124 @@
         ],
         "icons": [
           {
-            "filename": "disk",
-            "pattern": "Disk Partition|Disk"
+            "filename": "agent",
+            "pattern": "Agent Client Collector"
           },
           {
-            "filename": "aws_filesystem",
+            "filename": "app_service",
+            "pattern": "Application"
+          },
+          {
+            "filename": "app_service",
+            "pattern": "Application Service"
+          },
+          {
+            "filename": "cluster",
+            "pattern": "Cluster"
+          },
+          {
+            "filename": "datacenter",
+            "pattern": "Datacenter"
+          },
+          {
+            "filename": "image",
+            "pattern": "Image"
+          },
+          {
+            "filename": "gateway",
+            "pattern": "Cloud Gateway"
+          },
+          {
+            "filename": "availability_set",
+            "pattern": "Availability Zone"
+          },
+          {
+            "filename": "db_sql",
+            "pattern": "Cloud DataBase"
+          },
+          {
+            "filename": "ip",
+            "pattern": "Cloud LB IPAddress"
+          },
+          {
+            "filename": "loadbalancer",
+            "pattern": "Cloud Load Balancer"
+          },
+          {
+            "filename": "cloud_function",
+            "pattern": "Cloud Function"
+          },
+          {
+            "filename": "storage",
+            "pattern": "Cloud Object Storage"
+          },
+          {
+            "filename": "group",
+            "pattern": "Compute Security Group"
+          },
+          {
+            "filename": "Account",
+            "pattern": "Cloud Service Account"
+          },
+          {
+            "filename": "cloud",
+            "pattern": "Cloud Network"
+          },
+          {
+            "filename": "virtual_machine2",
+            "pattern": "Virtual Machine Instance"
+          },
+          {
+            "filename": "directory",
             "pattern": "File System"
+          },
+          {
+            "filename": "datacenter",
+            "pattern": "AWS Datacenter"
+          },
+          {
+            "filename": "storage",
+            "pattern": "Storage Mapping"
+          },
+          {
+            "filename": "virtual_network",
+            "pattern": "VNIC Endpoint"
+          },
+          {
+            "filename": "dns",
+            "pattern": "DNS Name"
+          },
+          {
+            "filename": "route",
+            "pattern": "Subnet Endpoint"
+          },
+          {
+            "filename": "network_interface",
+            "pattern": "Cloud Mgmt Network Interface"
+          },
+          {
+            "filename": "db_mysql",
+            "pattern": "MySQL Instance"
+          },
+          {
+            "filename": "docker_engine",
+            "pattern": "Docker Engine"
+          },
+          {
+            "filename": "disk",
+            "pattern": "Disk Partition|Disk"
           },
           {
             "filename": "ip",
             "pattern": "IP Address"
           },
           {
-            "filename": "nic",
+            "filename": "network_interface",
             "pattern": "Network Adapter"
+          },
+          {
+            "filename": "storage",
+            "pattern": "Storage Device"
           },
           {
             "filename": "windows",
@@ -1028,19 +1353,47 @@
             "pattern": "Kubernetes Pod"
           },
           {
+            "filename": "k8s-ns",
+            "pattern": "Kubernetes Namespace"
+          },
+          {
+            "filename": "k8s-deploy",
+            "pattern": "Kubernetes Deployment"
+          },
+          {
+            "filename": "k8s-cluster",
+            "pattern": "Kubernetes Cluster"
+          },
+          {
+            "filename": "k8s-node",
+            "pattern": "Kubernetes Node"
+          },
+          {
+            "filename": "k8s-ds",
+            "pattern": "Kubernetes DaemonSet|Kubernetes StatefulSet"
+          },
+          {
+            "filename": "loadbalance_svc",
+            "pattern": "Load Balancer Service"
+          },
+          {
+            "filename": "f5_loadbalancer",
+            "pattern": "F5 BIG-IP"
+          },
+          {
             "filename": "docker_container",
             "pattern": "Docker Container|Docker Image"
           },
           {
-            "filename": "application_generic",
+            "filename": "app_service",
             "pattern": "ServiceNow Application Component"
           },
           {
-            "filename": "application_svc",
+            "filename": "app_service",
             "pattern": "ServiceNow Application"
           },
           {
-            "filename": "gear",
+            "filename": "server2",
             "pattern": "ServiceNow MID Server"
           },
           {
@@ -1052,39 +1405,79 @@
             "pattern": "Tag-Based Application Service"
           },
           {
-            "filename": "aws_logo",
-            "pattern": "Hardware Type"
+            "filename": "network_interface",
+            "pattern": "VMware vCenter Network"
           },
           {
-            "filename": "aws_ami",
-            "pattern": "Image"
+            "filename": "server",
+            "pattern": "ESX Server"
           },
           {
-            "filename": "aws_volume",
-            "pattern": "Storage Mapping"
+            "filename": "virtual_machine2",
+            "pattern": "Virtual Machine Instance"
           },
           {
-            "filename": "nic",
-            "pattern": "VNIC Endpoint"
+            "filename": "server2",
+            "pattern": "Server Chassis"
           },
           {
-            "filename": "datacenter",
-            "pattern": "AWS Datacenter"
+            "filename": "switch",
+            "pattern": "Switch|IP Switch"
           },
           {
-            "filename": "aws_instance",
-            "pattern": "Virtual"
+            "filename": "business_svc",
+            "pattern": "Business Service"
           },
           {
-            "filename": "ip",
-            "pattern": "Subnet Endpoint"
+            "filename": "router",
+            "pattern": "IP Router"
           },
           {
-            "filename": "virtual_machine",
-            "pattern": "DNS"
+            "filename": "db_sql",
+            "pattern": "MSFT SQL Instance"
           },
           {
-            "filename": "aws_logo",
+            "filename": "web_server",
+            "pattern": "Web Server"
+          },
+          {
+            "filename": "web",
+            "pattern": "HTTP"
+          },
+          {
+            "filename": "web_site",
+            "pattern": "Web Site"
+          },
+          {
+            "filename": "network_interface",
+            "pattern": "Router Interface"
+          },
+          {
+            "filename": "virtual_machine2",
+            "pattern": "Virtual Machine Instance"
+          },
+          {
+            "filename": "resource_group",
+            "pattern": "Resource Group"
+          },
+          {
+            "filename": "disk",
+            "pattern": "File System"
+          },
+          {
+            "filename": "network_interface",
+            "pattern": "Cloud Mgmt Network Interface"
+          },
+          {
+            "filename": "Account",
+            "pattern": "Cloud Service Account"
+          },
+          {
+            "filename": "availability_set",
+            "pattern": "Availability Zone"
+          },
+          {
+            "filename": "default",
             "pattern": ""
           }
         ],
@@ -1098,8 +1491,8 @@
         "sourceComponentPrefix": "origin_app",
         "style": {
           "dangerColor": "rgb(196, 22, 42)",
-          "healthyColor": "rgba(242, 72, 91, 1)",
-          "noDataColor": "rgba(114, 190, 104, 1)"
+          "healthyColor": "rgb(242, 72, 91)",
+          "noDataColor": "rgb(114, 190, 104)"
         },
         "sumTimings": true,
         "targetComponentPrefix": "target_app",
@@ -1109,8 +1502,25 @@
       "pluginVersion": "4.0.2",
       "targets": [
         {
-          "metricName": "$metricName",
-          "metricType": "$metricType",
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "sys_id",
+                "label": "Sys ID",
+                "value": "sys_id"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "$ci",
+                "value": "$ci"
+              },
+              "4": null
+            }
+          ],
           "refId": "A",
           "selectedQueryCategory": {
             "description": "Get Topology",
@@ -1118,25 +1528,11 @@
             "value": "Topology"
           },
           "selectedServiceList": {
-            "__isNew__": true,
             "label": "$ci",
             "value": "$ci"
           },
-          "service": "$service",
-          "source": "$source",
-          "sysparam_count": 0,
-          "sysparam_option1": [],
-          "sysparam_option2": [],
-          "sysparam_option3": [],
-          "sysparam_option4": [
-            {
-              "label": "",
-              "value": ""
-            }
-          ],
           "sysparam_query": "typeIN$relationshipType^parent.sys_class_nameNOT IN$filterClasses^child.sys_class_nameNOT IN$filterClasses",
           "topology_child_depth": "$childTopo",
-          "topology_filter": "$filterClasses",
           "topology_parent_depth": "$parentTopo"
         }
       ],
@@ -1390,9 +1786,27 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "label": "awslambda_cloud_function",
+                "value": "awslambda_cloud_function"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "$ci",
+                "value": "$ci"
+              },
+              "4": null
+            }
+          ],
           "hide": false,
           "refId": "A",
           "selectedQueryCategory": {
@@ -3062,7 +3476,7 @@
     }
   ],
   "refresh": "",
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {

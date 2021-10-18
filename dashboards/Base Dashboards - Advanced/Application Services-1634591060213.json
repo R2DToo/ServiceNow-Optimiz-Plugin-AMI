@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.2"
+      "version": "8.2.1"
     },
     {
       "type": "datasource",
@@ -73,11 +73,13 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632773101172,
+  "iteration": 1634591054665,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -106,7 +108,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Application Services</span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "metricName": "$metricName",
@@ -137,7 +139,7 @@
         "content": "<p style=\"text-align: center;\"><span style=\"font-size: 14pt;\">Overall Noise Reduction Last 30 days</span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "metricName": "$metricName",
@@ -279,10 +281,29 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "aggregateColumn": "sys_id",
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "operational_status",
+                "label": "Operational status",
+                "value": "operational_status"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "1",
+                "value": "1"
+              },
+              "4": null
+            }
+          ],
           "groupBy": "severity",
           "refId": "A",
           "selectedAggregateType": {
@@ -304,7 +325,7 @@
               "value": ""
             }
           ],
-          "sysparam_query": "operational_status=1^severityIN$severity^business_criticalityIN$business_criticality^nameLIKE$nameSearch",
+          "sysparam_query": "operational_status=1^business_criticalityIN$business_criticality^severityIN$severity^typeIN$type^u_business_segmentIN$businessSegment^nameLIKE$nameSearch",
           "tableName": {
             "description": "cmdb_ci_service_discovered",
             "label": "Mapped Application Service",
@@ -414,7 +435,7 @@
         "text": {},
         "textMode": "value_and_name"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "aggregateColumn": "event_count",
@@ -604,7 +625,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "depends_on_toggle": "$dependsOnFilter",
@@ -698,10 +719,29 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "aggregateColumn": "sys_id",
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "operational_status",
+                "label": "Operational status",
+                "value": "operational_status"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "1",
+                "value": "1"
+              },
+              "4": null
+            }
+          ],
           "depends_on_toggle": "$dependsOnFilter",
           "groupBy": "used_for",
           "metricName": "$metricName",
@@ -728,7 +768,7 @@
               "value": ""
             }
           ],
-          "sysparam_query": "operational_status=1^severityIN$severity^nameLIKE$nameSearch",
+          "sysparam_query": "operational_status=1^business_criticalityIN$business_criticality^severityIN$severity^typeIN$type^u_business_segmentIN$businessSegment^nameLIKE$nameSearch",
           "tableName": {
             "label": "Mapped Application Service (cmdb_ci_service_discovered)",
             "value": "cmdb_ci_service_discovered"
@@ -868,7 +908,7 @@
         "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"35\" height=\"35\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\"><span style=\"color: #2dc26b;\">Operational</span> Services&nbsp; <span style=\"font-size: 12pt; color: #eb459e;\">🏅<em>click on the 'name' link to drill into telemetry and insights!</em></span></span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "metricName": "$metricName",
@@ -1351,9 +1391,127 @@
           }
         ]
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "operational_status",
+                "label": "Operational status",
+                "value": "operational_status"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "1",
+                "value": "1"
+              },
+              "4": null
+            },
+            {
+              "1": {
+                "description": "busines_criticality",
+                "label": "Business criticality",
+                "value": "busines_criticality"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$business_criticality",
+                "value": "$business_criticality"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "severity",
+                "label": "Severity",
+                "value": "severity"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$severity",
+                "value": "$severity"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "type",
+                "label": "Service Type",
+                "value": "type"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$type",
+                "value": "$type"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "label": "u_business_segment",
+                "value": "u_business_segment"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$businessSegment",
+                "value": "$businessSegment"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "name",
+                "label": "Name",
+                "value": "name"
+              },
+              "2": {
+                "description": "LIKE",
+                "label": "contains",
+                "value": "LIKE"
+              },
+              "3": {
+                "label": "$nameSearch",
+                "value": "$nameSearch"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            }
+          ],
           "hide": false,
           "refId": "A",
           "selectedQueryCategory": {
@@ -1366,7 +1524,7 @@
             "label": "Name",
             "value": "name"
           },
-          "sysparam_count": 4,
+          "sysparam_count": 5,
           "sysparam_option1": [
             {
               "description": "operational_status",
@@ -1796,7 +1954,7 @@
             "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"35\" height=\"35\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\"><span style=\"color: #2dc26b;\">Outage</span> Report&nbsp; <span style=\"font-size: 12pt; color: #eb459e;\">🏅<em>Application Service can be filtered from top filters and looks at last 90 days!</em></span></span></p>",
             "mode": "html"
           },
-          "pluginVersion": "8.1.2",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
               "metricName": "$metricName",
@@ -1886,7 +2044,27 @@
           },
           "targets": [
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "description": "operational_status",
+                    "label": "Operational status",
+                    "value": "operational_status"
+                  },
+                  "2": {
+                    "description": "=",
+                    "label": "is",
+                    "value": "="
+                  },
+                  "3": {
+                    "label": "1",
+                    "value": "1"
+                  },
+                  "4": null
+                }
+              ],
               "refId": "A",
+              "rowLimit": "50",
               "selectedQueryCategory": {
                 "description": "Gathers business service status over the last 90 days",
                 "label": "Outage Status",
@@ -1902,7 +2080,7 @@
                   "value": ""
                 }
               ],
-              "sysparam_query": "operational_status=1^busines_criticalityIN$business_criticality^severityIN$severity^typeIN$type^nameLIKE$nameSearch"
+              "sysparam_query": "operational_status=1^business_criticalityIN$business_criticality^severityIN$severity^typeIN$type^u_business_segmentIN$businessSegment^nameLIKE$nameSearch"
             }
           ],
           "title": "Service Availability",
@@ -1993,10 +2171,30 @@
             },
             "textMode": "value_and_name"
           },
-          "pluginVersion": "8.1.2",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
+              "basic_sysparam": [
+                {
+                  "1": {
+                    "description": "operational_status",
+                    "label": "Operational status",
+                    "value": "operational_status"
+                  },
+                  "2": {
+                    "description": "=",
+                    "label": "is",
+                    "value": "="
+                  },
+                  "3": {
+                    "label": "1",
+                    "value": "1"
+                  },
+                  "4": null
+                }
+              ],
               "refId": "A",
+              "rowLimit": "50",
               "selectedQueryCategory": {
                 "description": "Gathers business service status over the last 90 days",
                 "label": "Outage Status",
@@ -2013,7 +2211,7 @@
                   "value": ""
                 }
               ],
-              "sysparam_query": "operational_status=1^busines_criticalityIN$business_criticality^severityIN$severity^typeIN$type^nameLIKE$nameSearch"
+              "sysparam_query": "operational_status=1^business_criticalityIN$business_criticality^severityIN$severity^typeIN$type^u_business_segmentIN$businessSegment^nameLIKE$nameSearch"
             }
           ],
           "title": "Service Availability Percentage",
@@ -2038,7 +2236,7 @@
     }
   ],
   "refresh": "",
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -2068,7 +2266,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -2120,10 +2318,14 @@
         "current": {
           "selected": true,
           "text": [
-            "All"
+            "Critical",
+            "Major",
+            "Minor"
           ],
           "value": [
-            "$__all"
+            "1",
+            "2",
+            "3"
           ]
         },
         "description": null,
@@ -2135,7 +2337,7 @@
         "name": "severity",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "All",
             "value": "$__all"
           },
@@ -2150,17 +2352,17 @@
             "value": "4"
           },
           {
-            "selected": false,
+            "selected": true,
             "text": "Minor",
             "value": "3"
           },
           {
-            "selected": false,
+            "selected": true,
             "text": "Major",
             "value": "2"
           },
           {
-            "selected": false,
+            "selected": true,
             "text": "Critical",
             "value": "1"
           }
@@ -2192,6 +2394,29 @@
         "skipUrlSync": false,
         "sort": 5,
         "type": "query"
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "servicenow-optimiz-plugin",
+        "definition": "cmdb_ci_service_discovered||u_business_segment||u_business_segment||operational_status=1 (generic)",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": true,
+        "label": "Business Segment",
+        "multi": true,
+        "name": "businessSegment",
+        "options": [],
+        "query": {
+          "namespace": "generic",
+          "rawQuery": "cmdb_ci_service_discovered||u_business_segment||u_business_segment||operational_status=1"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 5,
+        "type": "query"
       }
     ]
   },
@@ -2215,6 +2440,6 @@
   },
   "timezone": "",
   "title": "Application Services",
-  "uid": "rD_AfGznz",
-  "version": 2
+  "uid": "rD_AfGzqs",
+  "version": 3
 }

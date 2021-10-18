@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.3"
+      "version": "8.2.1"
     },
     {
       "type": "datasource",
@@ -61,11 +61,13 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1632429468986,
+  "iteration": 1634590081539,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "datasource": "servicenow-optimiz-plugin",
@@ -80,7 +82,7 @@
         "content": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><img src=\"/images/now-agent-icon.png\" width=\"27\" height=\"27\" alt=\"\" style=\"float: left;\" />&nbsp; Metric Intelligence <span style=\"color: #f1c40f;\">Anomaly Insights</span> </span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "refId": "A",
@@ -173,6 +175,45 @@
       },
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "cmdb_ci.sys_id",
+                "label": "Configuration item => Sys ID",
+                "value": "cmdb_ci.sys_id"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$ci",
+                "value": "$ci"
+              },
+              "4": null
+            },
+            {
+              "1": {
+                "description": "severity",
+                "label": "Severity",
+                "value": "severity"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$severity",
+                "value": "$severity"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            }
+          ],
           "refId": "A",
           "selectedQueryCategory": {
             "description": "Get timeseries data based on a time trend",
@@ -549,9 +590,68 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "description": "sys_created_on",
+                "label": "Created",
+                "value": "sys_created_on"
+              },
+              "2": {
+                "description": ">=",
+                "label": "greater than or is",
+                "value": ">="
+              },
+              "3": {
+                "label": "javascript:gs.dateGenerate('${__from:date:YYYY-MM-DD}','${__from:date:HH-mm-SS}')",
+                "value": "javascript:gs.dateGenerate('${__from:date:YYYY-MM-DD}','${__from:date:HH-mm-SS}')"
+              },
+              "4": null
+            },
+            {
+              "1": {
+                "description": "cmdb_ci.sys_id",
+                "label": "Configuration item => Sys ID",
+                "value": "cmdb_ci.sys_id"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$ci",
+                "value": "$ci"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            },
+            {
+              "1": {
+                "description": "severity",
+                "label": "Severity",
+                "value": "severity"
+              },
+              "2": {
+                "description": "IN",
+                "label": "is one of",
+                "value": "IN"
+              },
+              "3": {
+                "label": "$severity",
+                "value": "$severity"
+              },
+              "4": {
+                "label": "AND",
+                "value": "^"
+              }
+            }
+          ],
           "refId": "A",
           "selectedQueryCategory": {
             "description": "Parse values out of Alert Anomalies table",
@@ -845,7 +945,7 @@
         "content": "<p><span style=\"font-size: 14pt;\"><span style=\"font-size: 12pt; color: #eb459e;\">🏅&nbsp; <em>Focus on the auto-generated anomalie scores that have severity of Major and Critical. Also cpu metrics are not considered good candidates for anomalie generation.</em></span></span></p>",
         "mode": "html"
       },
-      "pluginVersion": "8.1.3",
+      "pluginVersion": "8.2.1",
       "targets": [
         {
           "metricName": "$metricName",
@@ -865,7 +965,7 @@
     }
   ],
   "refresh": "",
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -949,5 +1049,5 @@
   "timezone": "",
   "title": "Anomaly Insights",
   "uid": "gcYL6tR8a",
-  "version": 21
+  "version": 3
 }
