@@ -32,7 +32,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -137,7 +137,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1634590464344,
+  "iteration": 1634921386004,
   "links": [
     {
       "asDropdown": false,
@@ -178,7 +178,7 @@
       },
       "id": 78,
       "options": {
-        "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Event Management Insights</span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Event Management Insights</span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -282,6 +282,18 @@
       "targets": [
         {
           "aggregateColumn": "sys_id",
+          "basic_sysparam": [
+            {
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          ],
+          "getAlertCount": {
+            "label": "No",
+            "value": "false"
+          },
           "groupBy": "group_source",
           "refId": "A",
           "selectedAggregateType": {
@@ -1667,10 +1679,14 @@
             }
           ],
           "depends_on_toggle": "$dependsOnFilter",
+          "getAlertCount": {
+            "label": "No",
+            "value": "false"
+          },
           "metricName": "$metricName",
           "metricType": "$metricType",
           "refId": "A",
-          "rowLimit": "5000",
+          "rowLimit": "3000",
           "selectedAlertStateList": {
             "description": "Get Open and Reopen Alerts",
             "label": "Active",
@@ -1741,9 +1757,13 @@
               }
             }
           ],
+          "getAlertCount": {
+            "label": "No",
+            "value": "false"
+          },
           "hide": false,
           "refId": "B",
-          "rowLimit": "5000",
+          "rowLimit": "3000",
           "selectedQueryCategory": {
             "description": "Choose your own table to gather data from",
             "label": "Table",
@@ -1973,7 +1993,7 @@
             "h": 8,
             "w": 8,
             "x": 0,
-            "y": 35
+            "y": 34
           },
           "id": 65,
           "options": {
@@ -2080,7 +2100,7 @@
             "h": 7,
             "w": 10,
             "x": 12,
-            "y": 35
+            "y": 34
           },
           "id": 64,
           "options": {
@@ -2174,13 +2194,13 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 43
+            "y": 42
           },
           "id": 72,
           "options": {
             "showHeader": true
           },
-          "pluginVersion": "8.1.3",
+          "pluginVersion": "8.2.1",
           "targets": [
             {
               "refId": "A",
@@ -2361,7 +2381,7 @@
         "allValue": null,
         "current": {},
         "datasource": "servicenow-optimiz-plugin",
-        "definition": "em_alert||cmdb_ci.name||cmdb_ci||state!=Closed^group_sourceIN$group^sn_priority_groupIN$priority^severityIN$severity^descriptionLIKE$search^sourceIN$source^cmdb_ci.name!=null (generic)",
+        "definition": "em_alert||cmdb_ci.name||cmdb_ci||state!=Closed^group_sourceIN$group^sn_priority_groupIN$priority^severityIN$severity^descriptionLIKE$search^sourceIN$source^cmdb_ci.name!=null||3000 (generic)",
         "description": null,
         "error": null,
         "hide": 2,
@@ -2372,7 +2392,7 @@
         "options": [],
         "query": {
           "namespace": "generic",
-          "rawQuery": "em_alert||cmdb_ci.name||cmdb_ci||state!=Closed^group_sourceIN$group^sn_priority_groupIN$priority^severityIN$severity^descriptionLIKE$search^sourceIN$source^cmdb_ci.name!=null"
+          "rawQuery": "em_alert||cmdb_ci.name||cmdb_ci||state!=Closed^group_sourceIN$group^sn_priority_groupIN$priority^severityIN$severity^descriptionLIKE$search^sourceIN$source^cmdb_ci.name!=null||3000"
         },
         "refresh": 1,
         "regex": "",
@@ -2402,6 +2422,28 @@
         "skipUrlSync": false,
         "sort": 5,
         "type": "query"
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "servicenow-optimiz-plugin",
+        "definition": "undefined (global_image)",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "image",
+        "options": [],
+        "query": {
+          "namespace": "global_image"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
       }
     ]
   },
@@ -2413,5 +2455,5 @@
   "timezone": "",
   "title": "Simple Event Management",
   "uid": "v_aus7Z7z",
-  "version": 11
+  "version": 13
 }

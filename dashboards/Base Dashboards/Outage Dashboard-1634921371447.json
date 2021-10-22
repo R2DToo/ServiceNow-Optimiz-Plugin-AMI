@@ -20,7 +20,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -59,7 +59,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1634590518703,
+  "iteration": 1634921361981,
   "links": [],
   "liveNow": false,
   "panels": [

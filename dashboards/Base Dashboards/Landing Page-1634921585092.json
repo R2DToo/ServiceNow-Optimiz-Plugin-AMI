@@ -26,7 +26,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -77,7 +77,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1634867603623,
+  "iteration": 1634921579346,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -254,7 +254,7 @@
             "h": 8,
             "w": 14,
             "x": 0,
-            "y": 4
+            "y": 1
           },
           "id": 28,
           "options": {
@@ -550,7 +550,7 @@
         }
       ],
       "options": {
-        "content": "<p><img src=\"https://symbols.getvecta.com/stencil_95/73_servicenow-icon.1fd2eb4ac9.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\"><span style=\"font-size: 14pt;\">Active High Priority Issues</span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\"><span style=\"font-size: 14pt;\">Active High Priority Issues</span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -588,7 +588,7 @@
         }
       ],
       "options": {
-        "content": "<p><img src=\"https://symbols.getvecta.com/stencil_95/73_servicenow-icon.1fd2eb4ac9.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Application Services</span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Application Services</span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1039,7 +1039,7 @@
         }
       ],
       "options": {
-        "content": "<p><img src=\"https://symbols.getvecta.com/stencil_95/73_servicenow-icon.1fd2eb4ac9.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\"><span style=\"font-size: 14pt;\">Overall Noise Reduction Last 30 days</span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\"><span style=\"font-size: 14pt;\">Overall Noise Reduction Last 30 days</span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1077,7 +1077,7 @@
         }
       ],
       "options": {
-        "content": "<p><img src=\"https://symbols.getvecta.com/stencil_95/73_servicenow-icon.1fd2eb4ac9.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Cloud Virtual Machines<br /></span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Cloud Virtual Machines<br /></span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1121,7 +1121,7 @@
         }
       ],
       "options": {
-        "content": "<p><img src=\"https://symbols.getvecta.com/stencil_95/73_servicenow-icon.1fd2eb4ac9.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">VMWare Virtual Machines<br /></span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">VMWare Virtual Machines<br /></span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1631,7 +1631,7 @@
       },
       "id": 35,
       "options": {
-        "content": "<p><img src=\"https://symbols.getvecta.com/stencil_95/73_servicenow-icon.1fd2eb4ac9.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Top Talkers at a Glance</span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Top Talkers at a Glance</span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1975,7 +1975,7 @@
           },
           "id": 26,
           "options": {
-            "content": "<p><img src=\"https://symbols.getvecta.com/stencil_95/73_servicenow-icon.1fd2eb4ac9.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Base Dashboards</span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Base Dashboards</span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -2091,6 +2091,28 @@
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "servicenow-optimiz-plugin",
+        "definition": "undefined (global_image)",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "image",
+        "options": [],
+        "query": {
+          "namespace": "global_image"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
       }
     ]
   },
@@ -2102,5 +2124,5 @@
   "timezone": "",
   "title": "Landing Page",
   "uid": "kZifNtOnz",
-  "version": 80
+  "version": 81
 }

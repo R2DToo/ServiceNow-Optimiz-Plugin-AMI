@@ -20,7 +20,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -65,7 +65,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1634590062298,
+  "iteration": 1634921094749,
   "links": [
     {
       "asDropdown": false,
@@ -92,7 +92,7 @@
       },
       "id": 24,
       "options": {
-        "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Select multiple <span style=\"color: #2dc26b;\">Hosts</span> from filter ☝<span style=\"font-size: 10pt;\"></span></span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Select multiple <span style=\"color: #2dc26b;\">Hosts</span> from filter ☝<span style=\"font-size: 10pt;\"></span></span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1111,7 +1111,7 @@
           },
           "id": 39,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ITOM Alerts <span style=\"color: #2dc26b;\"></span><span style=\"font-size: 10pt;\"></span></span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ITOM Alerts <span style=\"color: #2dc26b;\"></span><span style=\"font-size: 10pt;\"></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -1924,7 +1924,7 @@
       },
       "id": 43,
       "options": {
-        "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Metric Intelligence&nbsp; <span style=\"font-size: 10pt;\">*<em>select any metrics from '<strong>All Metrics</strong>' filter</em></span></span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Metric Intelligence&nbsp; <span style=\"font-size: 10pt;\">*<em>select any metrics from '<strong>All Metrics</strong>' filter</em></span></span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -2115,7 +2115,7 @@
           },
           "id": 47,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Change Records&nbsp; </span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Change Records&nbsp; </span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -2480,6 +2480,28 @@
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "servicenow-optimiz-plugin",
+        "definition": "undefined (global_image)",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "image",
+        "options": [],
+        "query": {
+          "namespace": "global_image"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
       }
     ]
   },
@@ -2491,5 +2513,5 @@
   "timezone": "",
   "title": "Compare CIs",
   "uid": "P29OUYS7z",
-  "version": 5
+  "version": 6
 }

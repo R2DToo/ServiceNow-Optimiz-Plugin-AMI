@@ -38,7 +38,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -77,7 +77,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1634590176537,
+  "iteration": 1634921222367,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -927,8 +927,13 @@
               }
             }
           ],
+          "getAlertCount": {
+            "label": "No",
+            "value": "false"
+          },
           "hide": false,
           "refId": "A",
+          "rowLimit": "5000",
           "selectedQueryCategory": {
             "description": "Choose your own table to gather data from",
             "label": "Table",
@@ -1118,8 +1123,13 @@
               }
             }
           ],
+          "getAlertCount": {
+            "label": "No",
+            "value": "false"
+          },
           "hide": false,
           "refId": "B",
+          "rowLimit": "5000",
           "selectedQueryCategory": {
             "description": "Choose your own table to gather data from",
             "label": "Table",
@@ -2316,7 +2326,7 @@
         "allValue": null,
         "current": {},
         "datasource": "servicenow-optimiz-plugin",
-        "definition": "sn_itom_pattern_amazon_vm_instance||vm_name||vm_sys_id||ldc_regionIN$region (generic)",
+        "definition": "sn_itom_pattern_amazon_vm_instance||vm_name||vm_sys_id||ldc_regionIN$region||5000 (generic)",
         "description": null,
         "error": null,
         "hide": 2,
@@ -2327,7 +2337,7 @@
         "options": [],
         "query": {
           "namespace": "generic",
-          "rawQuery": "sn_itom_pattern_amazon_vm_instance||vm_name||vm_sys_id||ldc_regionIN$region"
+          "rawQuery": "sn_itom_pattern_amazon_vm_instance||vm_name||vm_sys_id||ldc_regionIN$region||5000"
         },
         "refresh": 1,
         "regex": "",
@@ -2345,5 +2355,5 @@
   "timezone": "",
   "title": "AWS Inventory - US Regions",
   "uid": "CMBbLUi7k",
-  "version": 4
+  "version": 5
 }

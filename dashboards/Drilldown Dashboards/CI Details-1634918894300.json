@@ -26,7 +26,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -203,7 +203,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1634590008033,
+  "iteration": 1634918884372,
   "links": [
     {
       "asDropdown": false,
@@ -256,7 +256,7 @@
       },
       "id": 109,
       "options": {
-        "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Agent&nbsp;</span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Agent&nbsp;</span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1253,7 +1253,7 @@
       },
       "id": 98,
       "options": {
-        "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Topology&nbsp; <span style=\"font-size: 10pt;\">*<em>select <strong>child</strong> and <strong>parent</strong> topo levels to widen topology view</em></span></span></p>",
+        "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Topology&nbsp; <span style=\"font-size: 10pt;\">*<em>select <strong>child</strong> and <strong>parent</strong> topo levels to widen topology view</em></span></span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1794,7 +1794,7 @@
             "pattern": "Kubernetes DaemonSet|Kubernetes StatefulSet"
           },
           {
-            "filename": "loadbalance_svc",
+            "filename": "loadbalancer",
             "pattern": "Load Balancer Service"
           },
           {
@@ -1927,6 +1927,10 @@
               "4": null
             }
           ],
+          "getAlertCount": {
+            "label": "No",
+            "value": "false"
+          },
           "refId": "A",
           "selectedQueryCategory": {
             "description": "Get Topology",
@@ -2056,11 +2060,11 @@
             "h": 2,
             "w": 23,
             "x": 0,
-            "y": 3
+            "y": 25
           },
           "id": 118,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC Metric KPI Baselines<span style=\"font-size: 10pt;\"></span></span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC Metric KPI Baselines<span style=\"font-size: 10pt;\"></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -2261,7 +2265,7 @@
             "h": 5,
             "w": 8,
             "x": 0,
-            "y": 5
+            "y": 27
           },
           "id": 49,
           "maxPerRow": 3,
@@ -2374,7 +2378,7 @@
             "h": 2,
             "w": 23,
             "x": 0,
-            "y": 10
+            "y": 32
           },
           "id": 174,
           "options": {
@@ -2426,11 +2430,11 @@
             "h": 2,
             "w": 23,
             "x": 0,
-            "y": 4
+            "y": 26
           },
           "id": 93,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Metric Intelligence&nbsp; <span style=\"font-size: 10pt;\">*<em>select any metrics from '<strong>All Metrics</strong>' filter</em></span></span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Metric Intelligence&nbsp; <span style=\"font-size: 10pt;\">*<em>select any metrics from '<strong>All Metrics</strong>' filter</em></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -2635,7 +2639,7 @@
             "h": 5,
             "w": 24,
             "x": 0,
-            "y": 6
+            "y": 28
           },
           "id": 16,
           "options": {
@@ -2730,7 +2734,7 @@
           },
           "id": 94,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ITOM Alerts&nbsp;</span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ITOM Alerts&nbsp;</span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -4230,11 +4234,11 @@
             "h": 2,
             "w": 23,
             "x": 0,
-            "y": 11
+            "y": 28
           },
           "id": 184,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Software on Server<span style=\"font-size: 10pt;\"></span></span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Software on Server<span style=\"font-size: 10pt;\"></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -4444,7 +4448,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 13
+            "y": 30
           },
           "id": 162,
           "options": {
@@ -4680,11 +4684,11 @@
             "h": 2,
             "w": 23,
             "x": 0,
-            "y": 12
+            "y": 29
           },
           "id": 194,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Running Processes on Server<span style=\"font-size: 10pt;\"></span></span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Running Processes on Server<span style=\"font-size: 10pt;\"></span></span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -4816,7 +4820,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 14
+            "y": 31
           },
           "id": 164,
           "options": {
@@ -4962,11 +4966,11 @@
             "h": 2,
             "w": 10,
             "x": 0,
-            "y": 13
+            "y": 30
           },
           "id": 99,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Change Records - scope based on CI relationships&nbsp; </span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">Change Records - scope based on CI relationships&nbsp; </span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -5148,7 +5152,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 15
+            "y": 32
           },
           "id": 26,
           "options": {
@@ -5273,11 +5277,11 @@
             "h": 2,
             "w": 10,
             "x": 0,
-            "y": 14
+            "y": 31
           },
           "id": 100,
           "options": {
-            "content": "<p><img src=\"/images/now-agent-icon.png\" width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Checks&nbsp;</span></p>",
+            "content": "<p><img src=$image width=\"50\" height=\"50\" alt=\"\" />&nbsp; &nbsp;<span style=\"font-size: 14pt;\">ACC-M Checks&nbsp;</span></p>",
             "mode": "html"
           },
           "pluginVersion": "8.2.1",
@@ -5361,7 +5365,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 16
+            "y": 33
           },
           "id": 22,
           "options": {
@@ -5798,6 +5802,28 @@
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "servicenow-optimiz-plugin",
+        "definition": "undefined (global_image)",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "image",
+        "options": [],
+        "query": {
+          "namespace": "global_image"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
       }
     ]
   },
@@ -5809,5 +5835,5 @@
   "timezone": "",
   "title": "CI Details",
   "uid": "gcYL6tR7k",
-  "version": 14
+  "version": 16
 }

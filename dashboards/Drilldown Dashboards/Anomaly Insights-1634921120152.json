@@ -20,7 +20,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -65,7 +65,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1634590081539,
+  "iteration": 1634921114260,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -79,7 +79,7 @@
       },
       "id": 8,
       "options": {
-        "content": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><img src=\"/images/now-agent-icon.png\" width=\"27\" height=\"27\" alt=\"\" style=\"float: left;\" />&nbsp; Metric Intelligence <span style=\"color: #f1c40f;\">Anomaly Insights</span> </span></p>",
+        "content": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><img src=$image width=\"27\" height=\"27\" alt=\"\" style=\"float: left;\" />&nbsp; Metric Intelligence <span style=\"color: #f1c40f;\">Anomaly Insights</span> </span></p>",
         "mode": "html"
       },
       "pluginVersion": "8.2.1",
@@ -1038,6 +1038,28 @@
         "skipUrlSync": false,
         "sort": 5,
         "type": "query"
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "servicenow-optimiz-plugin",
+        "definition": "undefined (global_image)",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "image",
+        "options": [],
+        "query": {
+          "namespace": "global_image"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
       }
     ]
   },
@@ -1049,5 +1071,5 @@
   "timezone": "",
   "title": "Anomaly Insights",
   "uid": "gcYL6tR8a",
-  "version": 3
+  "version": 4
 }
