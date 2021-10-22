@@ -28,6 +28,7 @@ then
         mkdir -p $grafanaDir/data/plugins
         cp -R novatec-sdg-panel $grafanaDir/data/plugins/
         cp -R servicenow-optimiz-plugin $grafanaDir/data/plugins/
+        sed -i 's/allow_loading_unsigned_plugins =/# allow_loading_unsigned_plugins =/' $grafanaDir/conf/defaults.ini
         echo "allow_loading_unsigned_plugins = servicenow-optimiz-plugin, novatec-sdg-panel" >> $grafanaDir/conf/defaults.ini
         mkdir -p $grafanaDir/conf/provisioning/dashboards/SNOWdashboards
         cp dashboards/mac-SNOWdashboards.yaml $grafanaDir/conf/provisioning/dashboards/
