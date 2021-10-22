@@ -34,7 +34,8 @@ then
         echo "      path: $grafanaDir/conf/provisioning/dashboards/SNOWdashboards" >> $grafanaDir/conf/provisioning/dashboards/mac-SNOWdashboards.yaml
         cp -R dashboards/* $grafanaDir/conf/provisioning/dashboards/SNOWdashboards/
         echo "Restarting Grafana"
-        $grafanaDir/bin/grafana-server web
+        cd $grafanaDir/bin
+        ./grafana-server web
 else
         echo "What version of Grafana are you using? The default option is 8.2.2"
         read grafanaVersion
@@ -51,5 +52,6 @@ else
         cp dashboards/mac-SNOWdashboards.yaml $grafanaDir/conf/provisioning/dashboards/
         cp -R dashboards/* $grafanaDir/conf/provisioning/dashboards/SNOWdashboards/
         echo "Restarting Grafana"
-        $grafanaDir/bin/grafana-server web
+        cd $grafanaDir/bin
+        ./grafana-server web
 fi
