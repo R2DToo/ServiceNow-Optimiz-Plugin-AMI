@@ -1,5 +1,6 @@
 #!/bin/bash
 grafanaDir=$(echo $HOME)"/grafana"
+
 installGrafana="blank"
 while [ "$installGrafana" != "n" ] && [ "$installGrafana" != "y" ] && [ "$installGrafana" != "N" ] && [ "$installGrafana" != "Y" ]
 do
@@ -10,7 +11,6 @@ do
     echo Would you like to install Grafana on this system? \(y\)es or \(n\)o
     read installGrafana
 done
-
 
 
 if [ "$installGrafana" == "y" ] || [ "$installGrafana" == "Y" ]
@@ -28,8 +28,8 @@ then
         mkdir -p $grafanaDir/data/plugins
         cp -R novatec-sdg-panel $grafanaDir/data/plugins/
         cp -R servicenow-optimiz-plugin $grafanaDir/data/plugins/
-        sed -i'' -e 's/allow_loading_unsigned_plugins =/# allow_loading_unsigned_plugins =/' $grafanaDir/conf/defaults.ini
-        echo "allow_loading_unsigned_plugins = servicenow-optimiz-plugin, novatec-sdg-panel" >> $grafanaDir/conf/defaults.ini
+        touch $grafanaDir/conf/custom.ini
+        echo "allow_loading_unsigned_plugins = servicenow-optimiz-plugin, novatec-sdg-panel" >> $grafanaDir/conf/custom.ini
         mkdir -p $grafanaDir/conf/provisioning/dashboards/SNOWdashboards
         cp dashboards/mac-SNOWdashboards.yaml $grafanaDir/conf/provisioning/dashboards/
         echo "      path: $grafanaDir/conf/provisioning/dashboards/SNOWdashboards" >> $grafanaDir/conf/provisioning/dashboards/mac-SNOWdashboards.yaml
@@ -47,12 +47,16 @@ else
         cp -R novatec-sdg-panel $grafanaDir/data/plugins/
         rm -rf $grafanaDir/data/plugins/servicenow-optimiz-plugin
         cp -R servicenow-optimiz-plugin $grafanaDir/data/plugins/
+        touch $grafanaDir/conf/custom.ini
+        echo "allow_loading_unsigned_plugins = servicenow-optimiz-plugin, novatec-sdg-panel" >> $grafanaDir/conf/custom.ini
         rm -rf $grafanaDir/conf/provisioning/dashboards/SNOWdashboards
         mkdir -p $grafanaDir/conf/provisioning/dashboards/SNOWdashboards
         rm -f $grafanaDir/conf/provisioning/dashboards/mac-SNOWdashboards.yaml
         cp dashboards/mac-SNOWdashboards.yaml $grafanaDir/conf/provisioning/dashboards/
+        echo "      path: $grafanaDir/conf/provisioning/dashboards/SNOWdashboards" >> $grafanaDir/conf/provisioning/dashboards/mac-SNOWdashboards.yaml
         cp -R dashboards/* $grafanaDir/conf/provisioning/dashboards/SNOWdashboards/
         echo "Restarting Grafana"
         cd $grafanaDir/bin
         ./grafana-server web
 fi
+echo Done :\)
