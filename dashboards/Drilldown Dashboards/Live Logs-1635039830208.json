@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.1.2"
+      "version": "8.2.1"
     },
     {
       "type": "panel",
@@ -26,7 +26,7 @@
       "type": "datasource",
       "id": "servicenow-optimiz-plugin",
       "name": "servicenow-optimiz-plugin",
-      "version": "1.0.0"
+      "version": "1.1.1"
     },
     {
       "type": "panel",
@@ -59,7 +59,7 @@
         "type": "dashboard"
       },
       {
-        "datasource": "servicenow-optimiz-plugin",
+        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
         "enable": true,
         "iconColor": "#eb459e",
         "mappings": {
@@ -118,11 +118,13 @@
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1630679235255,
+  "iteration": 1635039823076,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "datasource": "-- Dashboard --",
@@ -169,7 +171,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.1.2",
+      "pluginVersion": "8.2.1",
       "repeat": null,
       "targets": [
         {
@@ -338,7 +340,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": "servicenow-optimiz-plugin",
+      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
       "description": "",
       "gridPos": {
         "h": 19,
@@ -360,7 +362,29 @@
       "pluginVersion": "8.1.2",
       "targets": [
         {
+          "basic_sysparam": [
+            {
+              "1": {
+                "label": "host",
+                "value": "host"
+              },
+              "2": {
+                "description": "=",
+                "label": "is",
+                "value": "="
+              },
+              "3": {
+                "label": "$node",
+                "value": "$node"
+              },
+              "4": null
+            }
+          ],
           "elasticSearch": "$logSearch",
+          "getAlertCount": {
+            "label": "No",
+            "value": "false"
+          },
           "refId": "A",
           "rowLimit": "1000",
           "selectedQueryCategory": {
@@ -448,7 +472,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 30,
+  "schemaVersion": 31,
   "style": "dark",
   "tags": [
     "Logs"
@@ -457,7 +481,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "180a47581b2578107ef18736604bcb0b",
           "value": "180a47581b2578107ef18736604bcb0b"
         },
@@ -468,9 +492,9 @@
         "name": "k8_node",
         "options": [
           {
-            "selected": false,
-            "text": "",
-            "value": ""
+            "selected": true,
+            "text": "180a47581b2578107ef18736604bcb0b",
+            "value": "180a47581b2578107ef18736604bcb0b"
           }
         ],
         "query": "180a47581b2578107ef18736604bcb0b",
@@ -502,7 +526,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "servicenow-optimiz-plugin",
+        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
         "definition": "cmdb_ci_kubernetes_node||name||name||sys_id=$k8_node (generic)",
         "description": null,
         "error": null,
@@ -554,5 +578,5 @@
   "timezone": "",
   "title": "Live Logs",
   "uid": "FUyeXrn7z",
-  "version": 54
+  "version": 2
 }
