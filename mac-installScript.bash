@@ -28,8 +28,7 @@ then
         mkdir -p $grafanaDir/data/plugins
         cp -R novatec-sdg-panel $grafanaDir/data/plugins/
         cp -R servicenow-optimiz-plugin $grafanaDir/data/plugins/
-        touch $grafanaDir/conf/custom.ini
-        echo "allow_loading_unsigned_plugins = servicenow-optimiz-plugin, novatec-sdg-panel" >> $grafanaDir/conf/custom.ini
+        sed -i'' -e 's/allow_loading_unsigned_plugins =/allow_loading_unsigned_plugins = servicenow-optimiz-plugin,novatec-sdg-panel/' $grafanaDir/conf/defaults.ini
         mkdir -p $grafanaDir/conf/provisioning/dashboards/SNOWdashboards
         cp dashboards/mac-SNOWdashboards.yaml $grafanaDir/conf/provisioning/dashboards/
         echo "      path: $grafanaDir/conf/provisioning/dashboards/SNOWdashboards" >> $grafanaDir/conf/provisioning/dashboards/mac-SNOWdashboards.yaml
@@ -47,8 +46,7 @@ else
         cp -R novatec-sdg-panel $grafanaDir/data/plugins/
         rm -rf $grafanaDir/data/plugins/servicenow-optimiz-plugin
         cp -R servicenow-optimiz-plugin $grafanaDir/data/plugins/
-        touch $grafanaDir/conf/custom.ini
-        echo "allow_loading_unsigned_plugins = servicenow-optimiz-plugin, novatec-sdg-panel" >> $grafanaDir/conf/custom.ini
+        sed -i'' -e 's/allow_loading_unsigned_plugins =/allow_loading_unsigned_plugins = servicenow-optimiz-plugin,novatec-sdg-panel/' $grafanaDir/conf/defaults.ini
         rm -rf $grafanaDir/conf/provisioning/dashboards/SNOWdashboards
         mkdir -p $grafanaDir/conf/provisioning/dashboards/SNOWdashboards
         rm -f $grafanaDir/conf/provisioning/dashboards/mac-SNOWdashboards.yaml
