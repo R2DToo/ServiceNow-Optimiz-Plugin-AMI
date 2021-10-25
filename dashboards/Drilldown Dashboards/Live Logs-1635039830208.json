@@ -59,7 +59,7 @@
         "type": "dashboard"
       },
       {
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "enable": true,
         "iconColor": "#eb459e",
         "mappings": {
@@ -340,7 +340,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "description": "",
       "gridPos": {
         "h": 19,
@@ -526,7 +526,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "cmdb_ci_kubernetes_node||name||name||sys_id=$k8_node (generic)",
         "description": null,
         "error": null,

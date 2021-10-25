@@ -50,7 +50,7 @@
   "annotations": {
     "list": [
       {
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "enable": false,
         "iconColor": "semi-dark-red",
         "mappings": {
@@ -103,7 +103,7 @@
         }
       },
       {
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "enable": false,
         "iconColor": "blue",
         "mappings": {
@@ -209,7 +209,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -222,7 +222,7 @@
       "type": "row"
     },
     {
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1109,7 +1109,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1802,7 +1802,7 @@
       "type": "novatec-sdg-panel"
     },
     {
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2007,7 +2007,7 @@
     },
     {
       "collapsed": true,
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2017,7 +2017,7 @@
       "id": 24,
       "panels": [
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2280,7 +2280,7 @@
     },
     {
       "collapsed": true,
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2290,7 +2290,7 @@
       "id": 10,
       "panels": [
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2525,7 +2525,7 @@
           "type": "stat"
         },
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2607,7 +2607,7 @@
           "type": "stat"
         },
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -3281,7 +3281,7 @@
     },
     {
       "collapsed": true,
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3291,7 +3291,7 @@
       "id": 71,
       "panels": [
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3557,7 +3557,7 @@
     },
     {
       "collapsed": true,
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3567,7 +3567,7 @@
       "id": 14,
       "panels": [
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3815,7 +3815,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -4076,7 +4076,7 @@
     },
     {
       "collapsed": true,
-      "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+      "datasource": "servicenow-optimiz-plugin",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -4086,7 +4086,7 @@
       "id": 32,
       "panels": [
         {
-          "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+          "datasource": "servicenow-optimiz-plugin",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -4234,7 +4234,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "sys_db_object||label||name||nameINcmdb_ci_vm_instance (generic)",
         "description": null,
         "error": null,
@@ -4279,7 +4279,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (golden_metric_names)",
         "description": null,
         "error": null,
@@ -4302,7 +4302,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci (metric_names)",
         "description": null,
         "error": null,
@@ -4427,7 +4427,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci||$parentTopo||$childTopo||typeIN$relationshipType (nested_classes)",
         "description": "",
         "error": null,
@@ -4450,7 +4450,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "$ci||$parentTopo||$childTopo||typeIN$relationshipType^parent.sys_class_nameNOT IN$filterClasses^child.sys_class_nameNOT IN$filterClasses (nested_cis)",
         "description": null,
         "error": null,
@@ -4473,7 +4473,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_SERVICENOW-OPTIMIZ-PLUGIN}",
+        "datasource": "servicenow-optimiz-plugin",
         "definition": "cmdb_rel_type||name||sys_id (generic)",
         "description": null,
         "error": null,
