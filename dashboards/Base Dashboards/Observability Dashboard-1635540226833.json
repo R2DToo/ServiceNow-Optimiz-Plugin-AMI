@@ -1112,7 +1112,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1215,7 +1215,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
