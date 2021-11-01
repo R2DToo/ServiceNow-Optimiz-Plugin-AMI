@@ -65,7 +65,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1635792877543,
+  "iteration": 1635801058123,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -199,7 +199,7 @@
             "mode": "thresholds"
           },
           "custom": {
-            "align": "auto",
+            "align": "center",
             "displayMode": "auto"
           },
           "mappings": [],
@@ -227,6 +227,70 @@
               {
                 "id": "custom.width",
                 "value": 409
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "acknowledged"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "false": {
+                        "color": "red",
+                        "index": 1
+                      },
+                      "true": {
+                        "color": "green",
+                        "index": 0
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "color-background-solid"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "state"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "Closed": {
+                        "color": "red",
+                        "index": 1
+                      },
+                      "Open": {
+                        "color": "green",
+                        "index": 0
+                      },
+                      "Reopen": {
+                        "color": "green",
+                        "index": 2
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "color-background-solid"
               }
             ]
           }
@@ -288,65 +352,65 @@
           "options": {
             "excludeByName": {},
             "indexByName": {
-              "acknowledged": 3,
-              "additional_info": 4,
-              "assigned_to": 5,
-              "assignment_group": 6,
-              "category": 7,
-              "classification": 8,
-              "cmdb_ci": 9,
-              "correlation_group": 10,
-              "correlation_rule_group": 11,
-              "description": 2,
-              "event_class": 12,
-              "event_count": 13,
-              "flap_count": 14,
-              "flap_last_state": 15,
-              "flap_last_update_time": 16,
-              "flap_start_window": 17,
-              "group": 18,
-              "group_source": 19,
-              "incident": 20,
-              "initial_event_time": 21,
-              "initial_remote_time": 22,
-              "is_group_alert": 23,
-              "kb": 24,
-              "kb_url": 25,
-              "kind": 56,
-              "last_event_time": 26,
-              "last_remote_time": 27,
-              "last_update_time_by_event": 28,
-              "maintenance": 29,
-              "message_key": 30,
-              "metric_name": 31,
-              "name": 57,
+              "acknowledged": 5,
+              "additional_info": 10,
+              "assigned_to": 11,
+              "assignment_group": 12,
+              "category": 13,
+              "classification": 14,
+              "cmdb_ci": 8,
+              "correlation_group": 15,
+              "correlation_rule_group": 16,
+              "description": 3,
+              "event_class": 17,
+              "event_count": 18,
+              "flap_count": 19,
+              "flap_last_state": 20,
+              "flap_last_update_time": 21,
+              "flap_start_window": 22,
+              "group": 23,
+              "group_source": 6,
+              "incident": 4,
+              "initial_event_time": 24,
+              "initial_remote_time": 25,
+              "is_group_alert": 26,
+              "kb": 27,
+              "kb_url": 28,
+              "kind": 57,
+              "last_event_time": 29,
+              "last_remote_time": 30,
+              "last_update_time_by_event": 31,
+              "maintenance": 32,
+              "message_key": 33,
+              "metric_name": 34,
+              "name": 7,
               "namespace": 58,
-              "node": 32,
-              "number": 0,
-              "parent": 33,
-              "priority_breakdown": 34,
-              "priority_json": 35,
-              "remote_task_id": 36,
-              "resource": 37,
-              "severity": 38,
-              "short_description": 39,
-              "sn_extra_data": 40,
-              "sn_num_work_notes": 41,
-              "sn_priority": 42,
-              "sn_priority_group": 43,
-              "sn_services": 44,
-              "sn_source_event_id": 45,
-              "source": 46,
-              "state": 1,
-              "sys_created_by": 47,
-              "sys_created_on": 48,
-              "sys_domain": 49,
-              "sys_id": 50,
-              "sys_mod_count": 51,
-              "sys_updated_by": 52,
-              "sys_updated_on": 53,
-              "type": 54,
-              "work_notes": 55
+              "node": 9,
+              "number": 1,
+              "parent": 35,
+              "priority_breakdown": 36,
+              "priority_json": 37,
+              "remote_task_id": 38,
+              "resource": 39,
+              "severity": 0,
+              "short_description": 40,
+              "sn_extra_data": 41,
+              "sn_num_work_notes": 42,
+              "sn_priority": 43,
+              "sn_priority_group": 44,
+              "sn_services": 45,
+              "sn_source_event_id": 46,
+              "source": 47,
+              "state": 2,
+              "sys_created_by": 48,
+              "sys_created_on": 49,
+              "sys_domain": 50,
+              "sys_id": 51,
+              "sys_mod_count": 52,
+              "sys_updated_by": 53,
+              "sys_updated_on": 54,
+              "type": 55,
+              "work_notes": 56
             },
             "renameByName": {}
           }
@@ -387,8 +451,8 @@
       {
         "current": {
           "selected": false,
-          "text": "c26bffc8dba3b010d41e9fd2ca96199a",
-          "value": "c26bffc8dba3b010d41e9fd2ca96199a"
+          "text": "8d191ebd1ba3b8107ef18736604bcb3a",
+          "value": "8d191ebd1ba3b8107ef18736604bcb3a"
         },
         "description": null,
         "error": null,
@@ -397,12 +461,12 @@
         "name": "record",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "",
             "value": ""
           }
         ],
-        "query": "c26bffc8dba3b010d41e9fd2ca96199a",
+        "query": "8d191ebd1ba3b8107ef18736604bcb3a",
         "skipUrlSync": false,
         "type": "textbox"
       },
@@ -484,5 +548,5 @@
   "timezone": "",
   "title": "UI Actions",
   "uid": "lVZDneO7k",
-  "version": 17
+  "version": 18
 }
