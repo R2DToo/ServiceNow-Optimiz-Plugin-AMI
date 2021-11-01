@@ -65,7 +65,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1635540114572,
+  "iteration": 1635792877543,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -112,16 +112,19 @@
       "options": {
         "contentType": "application/json",
         "icon": "cog",
-        "isAuth": true,
+        "isAuth": false,
         "method": "POST",
         "orientation": "center",
-        "params": [],
-        "password": "admin",
+        "params": [
+          [
+            "Authorization",
+            "Bearer eyJrIjoiTXZLdWNuejEwbzBtS2RyeTV3YW1WeWt6NHBTT3RuRDYiLCJuIjoiVUktQWN0aW9ucyIsImlkIjoxfQ=="
+          ]
+        ],
         "payload": "{}",
         "text": "$actionName",
         "type": "header",
         "url": "http://ec2-54-83-147-92.compute-1.amazonaws.com:3000/api/datasources/proxy/1/api/now/ui/ui_action/$action?sysparm_table=$ciClasses&sysparm_sys_id=$record&api=api",
-        "username": "admin",
         "variant": "primary"
       },
       "targets": [
@@ -159,7 +162,7 @@
       },
       "id": 8,
       "options": {
-        "content": "<p><span style=\"font-size: 14pt;\">If the actions fails to fire. Edit the button panel and make sure the Grafana admin user credentials are entered at the bottom. The URL may also need to be updated to reflect your FQDN.</span></p>",
+        "content": "<p>Action panel troubleshooting</p>\n<ul>\n  <li>Add an admin level API key to the header section (Authorization: Bearer <API_KEY>)\n  <li>Replace the base url with your current FQDN in the URL section\n<ul/>",
         "mode": "html"
       },
       "pluginVersion": "8.2.2",
@@ -394,7 +397,7 @@
         "name": "record",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "",
             "value": ""
           }
@@ -481,5 +484,5 @@
   "timezone": "",
   "title": "UI Actions",
   "uid": "lVZDneO7k",
-  "version": 15
+  "version": 17
 }
